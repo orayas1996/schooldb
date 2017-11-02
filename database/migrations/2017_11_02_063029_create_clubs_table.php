@@ -14,7 +14,7 @@ class CreateClubsTable extends Migration
     public function up()
     {
         Schema::create('clubs', function (Blueprint $table) {
-            $table-string('culb_id');
+            $table->string('culb_id');
 			$table->string('name');
 			$table->string('time'); /**เวลาเรียน*/
             $table->timestamps();
