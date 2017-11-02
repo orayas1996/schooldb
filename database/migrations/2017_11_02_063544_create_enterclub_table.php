@@ -14,7 +14,9 @@ class CreateEnterclubTable extends Migration
     public function up()
     {
         Schema::create('enterclub', function (Blueprint $table) {
-            $table->increments('id');
+           $table->string('student_id');
+		   $table->string('club');
+		   $table->string('score');
             $table->timestamps();
         });
     }
