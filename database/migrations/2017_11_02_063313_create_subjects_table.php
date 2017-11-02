@@ -18,7 +18,7 @@ class CreateSubjectsTable extends Migration
 			$table->string('name');
 			$table->string('time');
 			$table->string('year');
-			$table->string('teacher');
+			$table->string('sj_teacher');
             $table->timestamps();
         });
     }

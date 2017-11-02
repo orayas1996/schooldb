@@ -14,7 +14,12 @@ class CreateClassroomsTable extends Migration
     public function up()
     {
         Schema::create('classrooms', function (Blueprint $table) {
-            $table->increments('id');
+            $table->string('grade');
+			$table->string('room');
+			$table->string('term');
+			$table->string('class_teacher');
+			
+			
             $table->timestamps();
         });
     }
