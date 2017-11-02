@@ -14,7 +14,10 @@ class CreateParentsTable extends Migration
     public function up()
     {
         Schema::create('parents', function (Blueprint $table) {
-            $table->increments('id');
+        $table->string('ssn');
+		$table->string('name');
+		$table->string('address');
+		$table->string('phone');
             $table->timestamps();
         });
     }
