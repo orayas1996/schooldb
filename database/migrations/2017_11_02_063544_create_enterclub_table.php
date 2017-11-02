@@ -18,6 +18,8 @@ class CreateEnterclubTable extends Migration
 		   $table->string('club');
 		   $table->string('score');
             $table->timestamps();
+
+            $table->primary(['student_id','club']);
         });
     }
 

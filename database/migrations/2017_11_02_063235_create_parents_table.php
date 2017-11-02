@@ -19,6 +19,8 @@ class CreateParentsTable extends Migration
 		$table->string('address');
 		$table->string('phone');
             $table->timestamps();
+
+            $table->primary('ssn');
         });
     }
 

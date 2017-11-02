@@ -18,6 +18,8 @@ class CreateOwnparentTable extends Migration
 			$table->string('student_id');
 			$table->string('relation');
             $table->timestamps();
+
+            $table->primary(['student_id','parent_ssn']);
         });
     }
 

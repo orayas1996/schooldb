@@ -20,6 +20,8 @@ class CreateScoreTable extends Migration
 		  $table->integer('totalscore');
 		  $table->integer('behave_score');
             $table->timestamps();
+
+            $table->primary(['student_id','term']);
         });
     }
 

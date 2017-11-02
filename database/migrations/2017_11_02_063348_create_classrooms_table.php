@@ -18,9 +18,11 @@ class CreateClassroomsTable extends Migration
 			$table->string('room');
 			$table->string('term');
 			$table->string('class_teacher');
-			
-			
+
+
             $table->timestamps();
+
+            $table->primary(['grade','room']);
         });
     }
 

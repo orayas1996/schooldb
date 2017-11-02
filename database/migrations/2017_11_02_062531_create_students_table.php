@@ -23,6 +23,8 @@ class CreateStudentsTable extends Migration
 			$table->string('room');
 			$table->string('grade');  /**ชั้น*/
             $table->timestamps();
+
+            $table->primary('student_id');
         });
     }
 

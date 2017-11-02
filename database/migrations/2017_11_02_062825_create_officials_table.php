@@ -19,8 +19,10 @@ class CreateOfficialsTable extends Migration
 			$table->string('sex');
 			$table->string('address');
 			$table->string('teacherroom');
-			
+
             $table->timestamps();
+
+            $table->primary('ssn');
         });
     }
 

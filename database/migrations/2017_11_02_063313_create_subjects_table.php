@@ -20,6 +20,8 @@ class CreateSubjectsTable extends Migration
 			$table->string('year');
 			$table->string('sj_teacher');
             $table->timestamps();
+
+            $table->primary('id');
         });
     }
 

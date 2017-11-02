@@ -18,6 +18,8 @@ class CreateClubsTable extends Migration
 			$table->string('name');
 			$table->string('time'); /**เวลาเรียน*/
             $table->timestamps();
+
+            $table->primary('culb_id');
         });
     }
 
