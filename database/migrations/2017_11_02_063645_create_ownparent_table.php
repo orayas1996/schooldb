@@ -20,6 +20,7 @@ class CreateOwnparentTable extends Migration
             $table->timestamps();
 
             $table->primary(['student_id','parent_ssn']);
+            $table->foreign('parent_ssn')->references('ssn')->on('parents');
         });
     }
 

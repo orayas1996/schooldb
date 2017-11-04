@@ -23,6 +23,7 @@ class CreateEducationTable extends Migration
             $table->timestamps();
 
             $table->primary(['grade','room','subject']);
+            $table->foreign('subject')->references('id')->on('subjects');
         });
     }
 

@@ -19,9 +19,11 @@ class CreateSubjectsTable extends Migration
 			$table->string('time');
 			$table->string('year');
 			$table->string('sj_teacher');
+
             $table->timestamps();
 
             $table->primary('id');
+            $table->foreign('sj_teacher')->references('ssn')->on('officials');
         });
     }
 

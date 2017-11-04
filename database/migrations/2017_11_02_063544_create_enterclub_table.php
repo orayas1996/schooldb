@@ -20,6 +20,7 @@ class CreateEnterclubTable extends Migration
             $table->timestamps();
 
             $table->primary(['student_id','club']);
+            $table->foreign('club')->references('club_id')->on('clubs');
         });
     }
 

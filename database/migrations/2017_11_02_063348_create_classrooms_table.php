@@ -23,6 +23,7 @@ class CreateClassroomsTable extends Migration
             $table->timestamps();
 
             $table->primary(['grade','room']);
+            $table->foreign('class_teacher')->references('ssn')->on('officials');
         });
     }
 

@@ -19,10 +19,11 @@ class CreateOfficialsTable extends Migration
 			$table->string('sex');
 			$table->string('address');
 			$table->string('teacherroom');
-
+      $table->string('club');
             $table->timestamps();
 
             $table->primary('ssn');
+            $table->foreign('club')->references('club_id')->on('clubs');
         });
     }
 

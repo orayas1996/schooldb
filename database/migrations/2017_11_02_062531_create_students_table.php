@@ -25,6 +25,7 @@ class CreateStudentsTable extends Migration
             $table->timestamps();
 
             $table->primary('student_id');
+            
         });
     }
 

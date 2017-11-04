@@ -22,6 +22,7 @@ class CreateScoreTable extends Migration
             $table->timestamps();
 
             $table->primary(['student_id','term']);
+            $table->foreign('subject')->references('id')->on('subjects');
         });
     }
 
