@@ -12,4 +12,8 @@ class Clubs extends Model
     {
         return $this->hasMany('App\Students','enterclub');
     }
+    public function advisers()
+    {
+        return $this->hasMany('App\Officials');
+    }
 }

@@ -16,4 +16,8 @@ class Classrooms extends Model
     {
         return $this->belongsTO('App\Officials');
     }
+    public function subjects()
+    {
+        return $this->belongsTOMany('App\Subjects','education');
+    }
 }

@@ -12,5 +12,12 @@ class Officials extends Model
     {
         return $this->hasOne('App\Classrooms');
     }
-
+    public function subjects()
+    {
+        return $this->hasMany('App\Subjects');
+    }
+    public function club()
+    {
+        return $this->belongsTO('App\Clubs');
+    }
 }

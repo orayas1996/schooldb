@@ -10,7 +10,14 @@ class Subjects extends Model
 
     public function score()
     {
-
         return $this->belongsTOMany('App\Students','score');
+    }
+    public function class()
+    {
+        return $this->belongsTOMany('App\Classrooms','education');
+    }
+    public function teacher()
+    {
+        return $this->belongsTO('App\Officials');
     }
 }
