@@ -21,7 +21,7 @@ class CreateScoreTable extends Migration
 		  $table->integer('behave_score');
             $table->timestamps();
 
-            $table->primary(['student_id','term']);
+            $table->primary(['student_id','term','subject']);
             $table->foreign('subject')->references('id')->on('subjects');
         });
     }
