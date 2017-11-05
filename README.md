@@ -37,6 +37,3 @@ php -S localhost:8000 -t public
 ## Troubleshoots
 
 * Call to undefined function bcrypt(): use `crypt()` instead.
-
-
-
