@@ -14,13 +14,13 @@ class CreateParentsTable extends Migration
     public function up()
     {
         Schema::create('parents', function (Blueprint $table) {
-        $table->string('ssn');
-		$table->string('name');
-		$table->string('address');
-		$table->string('phone');
-            $table->timestamps();
+          $table->string('ssn',13);
+		      $table->string('name');
+		      $table->string('address');
+		      $table->string('phone');
+          $table->timestamps();
 
-            $table->primary('ssn');
+          $table->primary('ssn');
         });
     }
 

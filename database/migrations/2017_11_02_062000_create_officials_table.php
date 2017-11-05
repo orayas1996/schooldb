@@ -14,12 +14,12 @@ class CreateOfficialsTable extends Migration
     public function up()
     {
         Schema::create('officials', function (Blueprint $table) {
-            $table->string('ssn');
+            $table->string('ssn',13);
             $table->string('name');
 			      $table->string('sex');
 			      $table->string('address');
 			      $table->string('teacherroom');
-            $table->string('club');
+            $table->string('club',5);
             $table->timestamps();
 
             $table->primary('ssn');

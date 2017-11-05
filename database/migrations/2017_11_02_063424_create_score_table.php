@@ -14,11 +14,11 @@ class CreateScoreTable extends Migration
     public function up()
     {
         Schema::create('score', function (Blueprint $table) {
-          $table->string('student_id');
-		  $table->string('term');
-		  $table->string('subject');
-		  $table->integer('totalscore');
-		  $table->integer('behave_score');
+            $table->string('student_id',5);
+      		  $table->string('term');
+      		  $table->string('subject',5);
+      		  $table->integer('totalscore');
+      		  $table->integer('behave_score');
             $table->timestamps();
 
             $table->primary(['student_id','term','subject']);

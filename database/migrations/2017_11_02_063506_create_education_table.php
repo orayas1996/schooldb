@@ -14,16 +14,16 @@ class CreateEducationTable extends Migration
     public function up()
     {
         Schema::create('education', function (Blueprint $table) {
-           $table->string('grade');
-		   $table->string('room');
-		   $table->string('subject');
-		   $table->string('time');
-		   $table->string('place');
-		   $table->string('test_time');
-            $table->timestamps();
+           $table->string('grade',1);
+    		   $table->string('room',2);
+    		   $table->string('subject',5);
+    		   $table->string('time');
+    		   $table->string('place');
+    		   $table->string('test_time');
+           $table->timestamps();
 
-            $table->primary(['grade','room','subject']);
-            $table->foreign('subject')->references('id')->on('subjects');
+           $table->primary(['grade','room','subject']);
+           $table->foreign('subject')->references('id')->on('subjects');
         });
     }
 

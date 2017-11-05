@@ -14,9 +14,9 @@ class CreateOwnparentTable extends Migration
     public function up()
     {
         Schema::create('ownparent', function (Blueprint $table) {
-            $table->string('parent_ssn');
-			$table->string('student_id');
-			$table->string('relation');
+            $table->string('parent_ssn',13);
+      			$table->string('student_id',5);
+      			$table->string('relation');
             $table->timestamps();
 
             $table->primary(['student_id','parent_ssn']);
