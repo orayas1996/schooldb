@@ -13,7 +13,7 @@
     <td width="574" align="center" valign="middle">รายละเอียดข้อมูลนักเรียน</td>
   </tr>
   <tr>
-    <td height="40" align="center" valign="middle" bgcolor="#FF9966">บุคคลากร</td>
+    <td height="40" align="center" valign="middle" bgcolor="#FF9966"><a href="officials/index">บุคคลากร</a></td>
     <td align="center" valign="middle">รายละเอียดข้อมูลคุณครู</td>
   </tr>
   <tr>
@@ -21,7 +21,7 @@
     <td align="center" valign="middle">รายละเอียดราตางเรียนของนักเรียนแต่ละชั้นปี</td>
   </tr>
   <tr>
-    <td align="center" bgcolor="#FF9966">ผลการเรียน</td>
+    <td align="center" bgcolor="#FF9966"><a href="">ผลการเรียน</a></td>
     <td align="center" valign="middle">ตรวจสอบผลการเรียนใหม่และเก่าของนักเรียน</td>
   </tr>
 </table>
