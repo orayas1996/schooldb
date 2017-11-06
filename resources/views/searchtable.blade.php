@@ -12,7 +12,7 @@
 	<center>
 	<table>
 	<tr>
-		<td>มัธยมศึกษาปีที่4 :</td>
+		<td>มัธยมศึกษาปีที่1 :</td>
 		<td><select name="Search2">
 			<option value="room1" <? if($Search2=="room1"){ ?>selected<? }?>>ห้อง1</option>
 			<option value="room2" <? if($Search2=="room2"){ ?>selected<? }?>>ห้อง2</option>
@@ -30,7 +30,7 @@
 	<center>
 	<table>
 	<tr>
-		<td>มัธยมศึกษาปีที่5 :</td>
+		<td>มัธยมศึกษาปีที่2 :</td>
 		<td><select name="Search2">
 			<option value="room1" <? if($Search2=="room1"){ ?>selected<? }?>>ห้อง1</option>
 			<option value="room2" <? if($Search2=="room2"){ ?>selected<? }?>>ห้อง2</option>
@@ -48,7 +48,7 @@
 	<center>
 	<table>
 	<tr>
-		<td>มัธยมศึกษาปีที่6 :</td>
+		<td>มัธยมศึกษาปีที่3 :</td>
 		<td><select name="Search2">
 			<option value="room1" <? if($Search2=="room1"){ ?>selected<? }?>>ห้อง1</option>
 			<option value="room2" <? if($Search2=="room2"){ ?>selected<? }?>>ห้อง2</option>
