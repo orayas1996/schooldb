@@ -1,18 +1,28 @@
 <?php
 
 	namespace App\Http\Controllers;
-
+	
 	use Illuminate\Http\Request;
 	use App\Models\Student;
 	use App\Students;
 	use Illuminate\Support\Facades\DB;
-
+	
 	class StudentController extends Controller
 	{
+		public function insertpage()
+		{
+			return view('insertForm');
+		}
+		
+		public function editpage($id)
+		{
+			return view('editForm')->with('id',$id);
+		}
+		
 		public function index()
 		{
 		    $students = Students::all();
-
+			
 			echo "<h1>All Students</h1>";
 			echo "<table border=2>
 			<tr>
@@ -27,7 +37,7 @@
 				<th><center>Edit</center></th>
 				<th><center>Delete</center></th>
 				</tr>";
-
+    
 			foreach ($students as $student) {
 				echo "
 				<tr>
@@ -44,20 +54,10 @@
 				</tr>";
 			}
 			echo "</table><br>";
-
+	
 			echo"<form action=\"/students/insertpage\"><input type=\"submit\" value=\"Add Student\"></form>";
 		}
-
-		public function insertpage()
-		{
-			return view('insertForm');
-		}
-
-		public function editpage($id)
-		{
-			return view('editForm')->with('id',$id);
-		}
-
+		
 		public function save(Request $request)
 		{
 			$student = new Student;
@@ -70,13 +70,13 @@
 			$student->room=$request->input('room');
 			$student->grade=$request->input('grade');
 			$student->save();
-
+			
 			echo "Add Success!!";
 			echo"<form action=\"/students/index\">
 			<input type=\"submit\" value=\"Go To Students\">
 			</form>";
 		}
-
+		
 		public function delete($id)
 		{
 			$student = Student::findOrFail($id);
@@ -86,7 +86,7 @@
 			<input type=\"submit\" value=\"Go To Students\">
 			</form>";
 		}
-
+		
 		public function editsave(Request $request, $id)
 		{
 			$student = Student::findOrFail($id);

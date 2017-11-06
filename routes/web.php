@@ -63,6 +63,8 @@ $router->get('/student/{id}', function($id){
 	return $student;
 });
 
+$router->get('/home', 'PageController@homepage');
+
 $router->get('/students/index', 'StudentController@index');
 
 $router->get('/students/insertpage','StudentController@insertpage');
