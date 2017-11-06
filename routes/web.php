@@ -6,6 +6,7 @@ use App\Officials;
 use App\Parents;
 use App\Students;
 use App\Subjects;
+use App\Models\Student;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +24,9 @@ $router->get('/version', function () use ($router) {
 });
 
 $router->get('/students', function() {
-    $Students = Students::all();
+    $students = Students::all();
 	
-	return $Students;
+	return $students;
 });
 
 $router->get('/classroom', function() {
@@ -57,9 +58,22 @@ $router->get('/subject', function() {
 	return $Subjects;
 });
 
+$router->get('/student/{id}', function($id){
+	$student = Students::findOrFail($id);
+	return $student;
+});
 
+$router->get('/students/index', 'StudentController@index');
 
+$router->get('/students/insertpage','StudentController@insertpage');
 
+$router->post('/students/save','StudentController@save');
+
+$router->get('/student/{id}/delete','StudentController@delete');
+
+$router->get('/student/{id}/editpage','StudentController@editpage');
+
+$router->post('/student/{id}/editsave','StudentController@editsave');
 
 $router->get('/', 'IndexController@index');
 
