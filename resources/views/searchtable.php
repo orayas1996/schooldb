@@ -12,7 +12,7 @@
 <table width="100%" >
 <tr>
 <td width="36%">
-<div align="right">มัธยมศึกษาปีที่4 :
+<div align="right">&nbsp;&nbsp;มัธยมศึกษาปีที่4 :
 <select name="Search2">
       <option value="room1" <? if($Search2=="room1"){ ?>selected<? }?>>ห้อง1</option>
       <option value="room2" <? if($Search2=="room2"){ ?>selected<? }?>>ห้อง2</option>
@@ -67,6 +67,7 @@
 </tr>
 </table>
 </form>
+
 
  
  
