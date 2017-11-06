@@ -25,8 +25,8 @@
 				<td>{{$official->address}}</td>
 				<td><center>{{$official->teacherroom}}</center></td>
 				<td><center>{{$official->club}}</center></td>
-				<td><center><a href="/official/<?php echo $ssn; ?>/editpage">Click</a></center></td>
-				<td><center><a href="/official/<?php echo $ssn; ?>/delete">Click</a></center></td>
+				<td><center><a href="/student/<?php echo $ssn; ?>/editpage">Click</a></center></td>
+				<td><center><a href="/student/<?php echo $ssn; ?>/delete">Click</a></center></td>
 			</tr>
 		@endforeach
 	</table><br>

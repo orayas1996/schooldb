@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<form action='/official/save' method="post">
+	<form action='/officials/save' method="post">
 	<table>
 		<tr>
 			<td>Official_ssn : </td>
@@ -24,19 +24,19 @@
 			<td><input type="text" name="address"></td>
 		</tr>
 		<tr>
-			<td>Teacherroom : </td>
+			<td>TeacherRoom : </td>
 			<td><input type="text" name="teacherroom"></td>
 		</tr>
 		<tr>
 			<td>Club : </td>
-			<td><input type="text" name="Club"></td>
+			<td><input type="text" name="club"></td>
 		</tr>
 		<tr>
 			<td><input type="submit" name="submit" value="Add"></td>
 		</tr>
 	</table>
 	</form>
-	<form action="/official/index">
+	<form action="/officials/index">
     <input type="submit" value="Back">
 	</form>
 

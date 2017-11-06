@@ -36,7 +36,7 @@
 		</tr>
 	</table>
 	</form>
-	<form action="/official/index">
+	<form action="/officials/index">
     <input type="submit" value="Back">
 	</form>
 

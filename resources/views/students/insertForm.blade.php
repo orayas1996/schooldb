@@ -44,7 +44,7 @@
 		</tr>
 	</table>
 	</form>
-	<form action="/official/index">
+	<form action="/students/index">
     <input type="submit" value="Back">
 	</form>
 
