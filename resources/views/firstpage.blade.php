@@ -13,15 +13,15 @@
     <td width="574" align="center" valign="middle">รายละเอียดข้อมูลนักเรียน</td>
   </tr>
   <tr>
-    <td height="40" align="center" valign="middle" bgcolor="#FF9966"><a href="officials/index">บุคคลากร</a></td>
+    <td height="40" align="center" valign="middle" bgcolor="#FF9966"><a href="/officials/index">บุคคลากร</a></td>
     <td align="center" valign="middle">รายละเอียดข้อมูลคุณครู</td>
   </tr>
   <tr>
-    <td height="38" align="center" valign="middle" bgcolor="#FF9966">ตารางเรียน</td>
+    <td height="38" align="center" valign="middle" bgcolor="#FF9966"><a href="/table">ตารางเรียน</a></td>
     <td align="center" valign="middle">รายละเอียดราตางเรียนของนักเรียนแต่ละชั้นปี</td>
   </tr>
   <tr>
-    <td align="center" bgcolor="#FF9966"><a href="">ผลการเรียน</a></td>
+    <td align="center" bgcolor="#FF9966"><a href="/score">ผลการเรียน</a></td>
     <td align="center" valign="middle">ตรวจสอบผลการเรียนใหม่และเก่าของนักเรียน</td>
   </tr>
 </table>

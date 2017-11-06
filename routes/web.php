@@ -64,6 +64,8 @@ $router->get('/student/{id}', function($id){
 });
 //HOMEPAGE
 $router->get('/home', 'PageController@homepage');
+$router->get('/score', 'PageController@searchscore');
+$router->get('/table', 'PageController@searchtable');
 //STUDENT
 $router->get('/students/index', 'StudentController@index');
 $router->get('/students/insertpage','StudentController@insertpage');

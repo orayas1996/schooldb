@@ -56,6 +56,10 @@
 			echo "</table><br>";
 	
 			echo"<form action=\"/students/insertpage\"><input type=\"submit\" value=\"Add Student\"></form>";
+			echo"</form>
+				<form action=\"/home\">
+				<input type=\"submit\" value=\"Back\">
+				</form>";
 		}
 		
 		public function save(Request $request)

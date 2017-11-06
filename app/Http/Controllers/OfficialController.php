@@ -41,6 +41,10 @@
         echo "</table><br>";
 
   			echo"<form action=\"/officials/insertpage\"><input type=\"submit\" value=\"Add Official\"></form>";
+			echo"</form>
+				<form action=\"/home\">
+				<input type=\"submit\" value=\"Back\">
+				</form>";
   		}
 
   		public function insertpage()

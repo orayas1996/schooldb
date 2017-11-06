@@ -11,4 +11,14 @@
 		{
 			return view('firstpage');
 		}	
+		
+		public function searchscore()
+		{
+			return view('searchscore');
+		}
+		
+		public function searchtable()
+		{
+			return view('searchtable');
+		} 
 	}
