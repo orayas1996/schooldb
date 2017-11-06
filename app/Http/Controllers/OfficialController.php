@@ -40,7 +40,7 @@
   			}
         echo "</table><br>";
 
-  			echo"<form action=\"/official/insertpage\"><input type=\"submit\" value=\"Add Official\"></form>";
+  			echo"<form action=\"/officials/insertpage\"><input type=\"submit\" value=\"Add Official\"></form>";
   		}
 
   		public function insertpage()
@@ -61,11 +61,11 @@
   			$official->sex=$request->input('sex');
   			$official->address=$request->input('address');
   			$official->teacherroom=$request->input('teacherroom');
-  			$official->grade=$request->input('club');
+  			$official->club=$request->input('club');
   			$official->save();
 
   			echo "Add Success!!";
-  			echo"<form action=\"/official/index\">
+  			echo"<form action=\"/officials/index\">
   			<input type=\"submit\" value=\"Go To Officials\">
   			</form>";
   		}
@@ -75,7 +75,7 @@
   			$official = Official::findOrFail($ssn);
   			$official->delete();
   			echo "Delete Success!!";
-  			echo"<form action=\"/official/index\">
+  			echo"<form action=\"/officials/index\">
   			<input type=\"submit\" value=\"Go To official\">
   			</form>";
   		}
@@ -84,15 +84,15 @@
   		{
   			$official = Official::findOrFail($ssn);
   			//$student->id=$request->input('id');
-  			$official->ssn=$request->input('ssn');
+  			//$official->ssn=$request->input('ssn');
   			$official->name=$request->input('name');
   			$official->sex=$request->input('sex');
   			$official->address=$request->input('address');
   			$official->teacherroom=$request->input('teacherroom');
-        $official->club=$request->input('club');
+			$official->club=$request->input('club');
   			$official->save();
   			echo "Edit Success!!";
-  			echo"<form action=\"/official/index\">
+  			echo"<form action=\"/officials/index\">
   			<input type=\"submit\" value=\"Go To Official\">
   			</form>";
   		}
