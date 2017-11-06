@@ -67,7 +67,15 @@
 </tr>
 </table>
 </form>
+<?php
+if($strSearch=="Y"){
+     $sql="select * from tbl_student Where ".$Search2." like '%".$Search."%' "; 
+}else{
+     $sql="select * from tbl_student";
+}
 
+    $Qtotal = mysql_query($sql);
+?>	
 
  
  
