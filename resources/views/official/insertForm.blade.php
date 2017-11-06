@@ -5,14 +5,10 @@
 </head>
 <body>
 
-	<form action='/students/save' method="post">
+	<form action='/official/save' method="post">
 	<table>
 		<tr>
-			<td>StudentID : </td>
-			<td><input type="text" name="id"></td>
-		</tr>
-		<tr>
-			<td>SSN : </td>
+			<td>Official_ssn : </td>
 			<td><input type="text" name="ssn"></td>
 		</tr>
 		<tr>
@@ -24,20 +20,16 @@
 			<td><input type="text" name="sex"></td>
 		</tr>
 		<tr>
-			<td>Age : </td>
-			<td><input type="number" name="age"></td>
-		</tr>
-		<tr>
 			<td>Address : </td>
 			<td><input type="text" name="address"></td>
 		</tr>
 		<tr>
-			<td>Grade : </td>
-			<td><input type="text" name="grade"></td>
+			<td>Teacherroom : </td>
+			<td><input type="text" name="teacherroom"></td>
 		</tr>
 		<tr>
-			<td>Room : </td>
-			<td><input type="text" name="room"></td>
+			<td>Club : </td>
+			<td><input type="text" name="Club"></td>
 		</tr>
 		<tr>
 			<td><input type="submit" name="submit" value="Add"></td>

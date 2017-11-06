@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Insert Form</title>
+	<title>Edit Form</title>
 </head>
 <body>
 
-	<form action='/students/save' method="post">
+	<form action='/official/<?php echo $ssn; ?>/editsave' method="post">
 	<table>
-		<tr>
+		<!--<tr>
 			<td>StudentID : </td>
 			<td><input type="text" name="id"></td>
-		</tr>
-		<tr>
-			<td>SSN : </td>
-			<td><input type="text" name="ssn"></td>
-		</tr>
+		</tr>-->
 		<tr>
 			<td>Name : </td>
 			<td><input type="text" name="name"></td>
@@ -24,23 +20,19 @@
 			<td><input type="text" name="sex"></td>
 		</tr>
 		<tr>
-			<td>Age : </td>
-			<td><input type="number" name="age"></td>
-		</tr>
-		<tr>
 			<td>Address : </td>
 			<td><input type="text" name="address"></td>
 		</tr>
 		<tr>
-			<td>Grade : </td>
-			<td><input type="text" name="grade"></td>
+			<td>Teacherroom : </td>
+			<td><input type="text" name="teacherroom"></td>
 		</tr>
 		<tr>
-			<td>Room : </td>
-			<td><input type="text" name="room"></td>
+			<td>Club: </td>
+			<td><input type="text" name="club"></td>
 		</tr>
 		<tr>
-			<td><input type="submit" name="submit" value="Add"></td>
+			<td><input type="submit" name="submit" value="Edit"></td>
 		</tr>
 	</table>
 	</form>
