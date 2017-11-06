@@ -45,12 +45,12 @@
 
   		public function insertpage()
   		{
-  			return view('insertForm');
+  			return view('official.insertForm');
   		}
 
   		public function editpage($ssn)
   		{
-  			return view('editForm')->with('ssn',$ssn);
+  			return view('official.editForm')->with('ssn',$ssn);
   		}
 
       public function save(Request $request)
@@ -82,7 +82,7 @@
 
       public function editsave(Request $request, $ssn)
   		{
-  			$official = Student::findOrFail($ssn);
+  			$official = Official::findOrFail($ssn);
   			//$student->id=$request->input('id');
   			$official->ssn=$request->input('ssn');
   			$official->name=$request->input('name');
