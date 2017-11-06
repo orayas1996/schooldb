@@ -11,12 +11,12 @@
 	{
 		public function insertpage()
 		{
-			return view('insertForm');
+			return view('students.insertForm');
 		}
 		
 		public function editpage($id)
 		{
-			return view('editForm')->with('id',$id);
+			return view('students.editForm')->with('id',$id);
 		}
 		
 		public function index()
