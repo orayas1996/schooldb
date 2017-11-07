@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Students extends Model
 {
-
+	
     public $incrementing = false;
-
+	
     public function score()
     {
         return $this->belongsTOMany('App\Subjects','score');
@@ -23,6 +23,6 @@ class Students extends Model
     }
     public function classroom()
     {
-        return $this->belongsTOMany('App\Classrooms','class_record');
+        return $this->belongsTO('App\Classrooms');
     }
 }

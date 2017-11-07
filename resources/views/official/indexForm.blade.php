@@ -15,6 +15,7 @@
 		<td><center>club</center></td>
 		<td><center>Edit</center></td>
 		<td><center>Delete</center></td>
+		<td><center>Details</center></td>
 	</tr>
 
         @foreach ($officials as $official)
@@ -25,11 +26,16 @@
 				<td>{{$official->address}}</td>
 				<td><center>{{$official->teacherroom}}</center></td>
 				<td><center>{{$official->club}}</center></td>
-				<td><center><a href="/student/<?php echo $ssn; ?>/editpage">Click</a></center></td>
-				<td><center><a href="/student/<?php echo $ssn; ?>/delete">Click</a></center></td>
+				<td><center><a href="/official/{{$official->ssn}}/editpage">Click</a></center></td>
+				<td><center><a href="/official/{{$official->ssn}}/delete">Click</a></center></td>
+				<td><center><a href="/official/{{$official->ssn}}/detail">Click</a></center></td>
 			</tr>
 		@endforeach
 	</table><br>
+	</table><br>
+	<form action="/officials/insertpage"><input type="submit" value="Add Official"></form>
+	<br>
+	</form><form action="/home"><input type="submit" value="Back"></form>
 
 </body>
 </html>

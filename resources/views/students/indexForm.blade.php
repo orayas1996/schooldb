@@ -17,11 +17,12 @@
 		<td><center>room</center></td>
 		<td><center>Edit</center></td>
 		<td><center>Delete</center></td>
+		<td><center>Details</center></td>
 	</tr>
     
         @foreach ($students as $student)
 			<tr>
-				<td><center>{{$student->student_id}}</center></td>
+				<td><center>{{$student->id}}</center></td>
 				<td><center>{{$student->ssn}}</center></td>
 				<td>{{$student->name}}</td>
 				<td><center>{{$student->sex}}</center></td>
@@ -29,11 +30,16 @@
 				<td>{{$student->address}}</td>
 				<td><center>{{$student->grade}}</center></td>
 				<td><center>{{$student->room}}</center></td>
-				<td><center><a href="/student/<?php echo $id; ?>/editpage">Click</a></center></td>
-				<td><center><a href="/student/<?php echo $id; ?>/delete">Click</a></center></td>
+				<td><center><a href="/student/{{$student->id}}/editpage">Click</a></center></td>
+				<td><center><a href="/student/{{$student->id}}/delete">Click</a></center></td>
+				<td><center><a href="/student/{{$student->id}}/detail">Click</a></center></td>
 			</tr>
 		@endforeach
 	</table><br>
+	</table><br>
+	<form action="/students/insertpage"><input type="submit" value="Add Student"></form>
+	<br>
+	</form><form action="/home"><input type="submit" value="Back"></form>
 
 </body>
 </html>

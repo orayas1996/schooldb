@@ -9,7 +9,7 @@
     <td height="197" colspan="2" align="center" valign="middle" bgcolor="#FFCCCC">โรงเรียนมัธยมหมีน้อย</td>
   </tr>
   <tr>
-    <td width="168" height="36" align="center" valign="middle" bgcolor="#FF9966"><a href="/students/index">นักเรียน</a></td>
+    <td width="168" height="36" align="center" valign="middle" bgcolor="#FF9966"><a href="/students/searchstudent">นักเรียน</a></td>
     <td width="574" align="center" valign="middle">รายละเอียดข้อมูลนักเรียน</td>
   </tr>
   <tr>

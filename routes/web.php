@@ -67,12 +67,14 @@ $router->get('/home', 'PageController@homepage');
 $router->get('/score', 'PageController@searchscore');
 $router->get('/table', 'PageController@searchtable');
 //STUDENT
+$router->get('/students/searchstudent', 'StudentController@searchstudent');
 $router->get('/students/index', 'StudentController@index');
 $router->get('/students/insertpage','StudentController@insertpage');
 $router->post('/students/save','StudentController@save');
 $router->get('/student/{id}/delete','StudentController@delete');
 $router->get('/student/{id}/editpage','StudentController@editpage');
 $router->post('/student/{id}/editsave','StudentController@editsave');
+$router->get('/student/{id}/detail','StudentController@detail');
 //OFFICIAL
 $router->get('/officials/index', 'OfficialController@index');
 $router->get('/officials/insertpage','OfficialController@insertpage');
@@ -80,6 +82,9 @@ $router->post('/officials/save','OfficialController@save');
 $router->get('/official/{ssn}/delete','OfficialController@delete');
 $router->get('/official/{ssn}/editpage','OfficialController@editpage');
 $router->post('/official/{ssn}/editsave','OfficialController@editsave');
+$router->get('/official/{id}/detail','OfficialController@detail');
+//SCHEDULE
+$router->get('/schedule', 'PageController@table');
 
 $router->get('/', 'IndexController@index');
 

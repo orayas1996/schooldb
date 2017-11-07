@@ -11,41 +11,16 @@
 		public function index()
 		{
 		    $officials = Officials::all();
-
-			echo "<h1>All Officials</h1>";
-			echo "<table border=2>
-			<tr>
-				<th><center>ssn</center></th>
-				<th><center>name</center></th>
-				<th><center>sex</center></th>
-				<th><center>address</center></th>
-				<th><center>teacherroom</center></th>
-				<th><center>club</center></th>
-				<th><center>Edit</center></th>
-				<th><center>Delete</center></th>
-				</tr>";
-
-        foreach ($officials as $official) {
-  				echo "
-  				<tr>
-  					<td><center>$official->ssn</center></td>
-  					<td>$official->name</td>
-  					<td><center>$official->sex</center></td>
-  					<td>$official->address</td>
-  					<td><center>$official->teacherroom</center></td>
-  					<td><center>$official->club</center></td>
-  					<td><center><a href=\"/official/$official->ssn/editpage\">Click</a></center></td>
-  					<td><center><a href=\"/official/$official->ssn/delete\">Click</a></center></td>
-  				</tr>";
-  			}
-        echo "</table><br>";
-
-  			echo"<form action=\"/officials/insertpage\"><input type=\"submit\" value=\"Add Official\"></form>";
-			echo"</form>
-				<form action=\"/home\">
-				<input type=\"submit\" value=\"Back\">
-				</form>";
+			return view('official.indexForm', [
+			'officials' => $officials
+			]);
   		}
+		
+		public function detail($ssn)
+		{
+			$teacher = Officials::findOrFail($ssn);
+			return view('official.teacherdetail')->with('official',$teacher);
+		}
 
   		public function insertpage()
   		{

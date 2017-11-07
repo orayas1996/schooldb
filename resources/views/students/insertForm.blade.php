@@ -40,6 +40,10 @@
 			<td><input type="text" name="room"></td>
 		</tr>
 		<tr>
+			<td>Image : </td>
+			<td><input type="name" class="form-control" name="image" placeholder="link to image"></td>
+		</tr>
+		<tr>
 			<td><input type="submit" name="submit" value="Add"></td>
 		</tr>
 	</table>

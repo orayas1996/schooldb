@@ -4,6 +4,9 @@
 	
 	use Illuminate\Http\Request;
 	use Illuminate\Support\Facades\DB;
+	use App\Classrooms;
+	use App\Subjects;
+	use App\Education;
 
 	class PageController extends Controller
 	{
@@ -21,4 +24,11 @@
 		{
 			return view('searchtable');
 		} 
+		
+		public function table()
+		{
+			 $ccs = Education::all()->where('grade','6')->sortBy('period');//->orderBy('period','asc');
+			return view('schedule', ['ccs' => $ccs]);
+		}
+		
 	}
