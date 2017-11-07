@@ -10,7 +10,7 @@ class Classrooms extends Model
 
     public function students()
     {
-        return $this->hasMany('App\Students');
+        return $this->belongsTOMany('App\Students','class_record');
     }
     public function teacher()
     {

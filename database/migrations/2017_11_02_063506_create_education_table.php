@@ -18,8 +18,9 @@ class CreateEducationTable extends Migration
     		   $table->string('room',2);
     		   $table->string('subject',5);
     		   $table->string('time');
+           $table->integer('day');
+           $table->integer('period');
     		   $table->string('place');
-    		   $table->string('test_time');
            $table->timestamps();
 
            $table->primary(['grade','room','subject']);
