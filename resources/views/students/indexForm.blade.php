@@ -21,7 +21,7 @@
     
         @foreach ($students as $student)
 			<tr>
-				<td><center>{{$student->id}}</center></td>
+				<td><center>{{$student->student_id}}</center></td>
 				<td><center>{{$student->ssn}}</center></td>
 				<td>{{$student->name}}</td>
 				<td><center>{{$student->sex}}</center></td>
