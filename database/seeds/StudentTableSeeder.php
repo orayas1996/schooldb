@@ -18,7 +18,7 @@ class StudentTableSeeder extends Seeder
             'sex' => 'm',
             'age' => 11,
             'address' => 'Etiam vel neque in odio',
-            'grade' => '1',
+            'grade' => '3',
             'room' => '1'
         ]);
         DB::table('students')->insert([

@@ -25,5 +25,12 @@ class SubjectTableSeeder extends Seeder
             'year' => '2017',
             'sj_teacher' => '1624436366416'
         ]);
+        DB::table('subjects')->insert([
+            'id' => 'GG192',
+            'name' => 'Geometric2',
+            'time' => '11.00-12.00 4 dec 2018',
+            'year' => '2019',
+            'sj_teacher' => '1624436366416'
+        ]);
     }
 }
