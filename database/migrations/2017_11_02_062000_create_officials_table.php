@@ -20,6 +20,8 @@ class CreateOfficialsTable extends Migration
 			      $table->string('address');
 			      $table->string('teacherroom');
             $table->string('club',5);
+            $table->string('user')->uniqe();
+            $table->string('password');
             $table->timestamps();
 
             $table->primary('ssn');
