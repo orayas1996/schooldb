@@ -8,59 +8,51 @@
 <body>
 
 <h1><center>ตารางเรียน</center></h1>
-<form name="form1" method="get" action="schedule">
+
 	<center>
 	<table>
 	<tr>
-		<td>มัธยมศึกษาปีที่4 :</td>
-		<td><select name="Search2">
-			<option value="room1" <? if($Search2=="room1"){ ?>selected<? }?>>ห้อง1</option>
-			<option value="room2" <? if($Search2=="room2"){ ?>selected<? }?>>ห้อง2</option>
-			<option value="room3" <? if($Search2=="room3"){ ?>selected<? }?>>ห้อง3</option>
-			<option value="room4" <? if($Search2=="room4"){ ?>selected<? }?>>ห้อง4</option>
-			<option value="room5" <? if($Search2=="room5"){ ?>selected<? }?>>ห้อง5</option>
-		</select></td>
-		<td><input type="submit" name="submit" value="Search"></td>
+		<td>มัธยมศึกษาปีที่1 :</td>
+		<td><a href="/schedule/1/1">ห้อง1</a></td>
+		<td><a href="/schedule/1/2">ห้อง2</a></td>
+		<td><a href="/schedule/1/3">ห้อง3</a></td>
+		<td><a href="/schedule/1/4">ห้อง4</a></td>
+		<td><a href="/schedule/1/5">ห้อง5</a></td>
 	</tr>
 	</table>
 	</center>
-</form>
+
 <br>
-<form name="form1" method="get" action="/schedule">
+
 	<center>
 	<table>
 	<tr>
-		<td>มัธยมศึกษาปีที่5 :</td>
-		<td><select name="Search2">
-			<option value="room1" <? if($Search2=="room1"){ ?>selected<? }?>>ห้อง1</option>
-			<option value="room2" <? if($Search2=="room2"){ ?>selected<? }?>>ห้อง2</option>
-			<option value="room3" <? if($Search2=="room3"){ ?>selected<? }?>>ห้อง3</option>
-			<option value="room4" <? if($Search2=="room4"){ ?>selected<? }?>>ห้อง4</option>
-			<option value="room5" <? if($Search2=="room5"){ ?>selected<? }?>>ห้อง5</option>
-		</select></td>
-	<td><input type="submit" name="submit" value="Search"> </td>
+		<tr>
+		<td>มัธยมศึกษาปีที่2 :</td>
+		<td><a href="/schedule/2/1">ห้อง1</a></td>
+		<td><a href="/schedule/2/2">ห้อง2</a></td>
+		<td><a href="/schedule/2/3">ห้อง3</a></td>
+		<td><a href="/schedule/2/4">ห้อง4</a></td>
+		<td><a href="/schedule/2/5">ห้อง5</a></td>
 	</tr>
 	</table>
 	</center>
-</form>
+
 <br>
-<form name="form1" method="get" action="/schedule">
+
 	<center>
 	<table>
 	<tr>
-		<td>มัธยมศึกษาปีที่6 :</td>
-		<td><select name="room">
-			<option value="room1">ห้อง1</option>
-			<option value="room2">ห้อง2</option>
-			<option value="room3">ห้อง3</option>
-			<option value="room4">ห้อง4</option>
-			<option value="room5">ห้อง5</option>
-		</select></td>
-	<td><input type="submit" name="submit" value="Search"></td>
+		<td>มัธยมศึกษาปีที่3:</td>
+		<td><a href="/schedule/6/1">ห้อง1</a></td>
+		<td><a href="/schedule/6/2">ห้อง2</a></td>
+		<td><a href="/schedule/6/3">ห้อง3</a></td>
+		<td><a href="/schedule/6/4">ห้อง4</a></td>
+		<td><a href="/schedule/6/5">ห้อง5</a></td>
 	</tr>
 	</table>
 	<center>
-</form>
+
 <br>
 <center>
 <form action="/home"><input type="submit" value="Back">

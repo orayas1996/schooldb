@@ -11,7 +11,7 @@
     ตารางเรียน
   </caption>
   <tr>
-    <td width="57" align="center" valign="middle" bgcolor="#FF9999">วัน/เวลา</td>
+    <td width="85" align="center" valign="middle" bgcolor="#FF9999">วัน/เวลา</td>
     <td width="85">08.00-09.00</td>
     <td width="85">09.00-10.00</td>
     <td width="85">10.00-11.00</td>
@@ -23,53 +23,33 @@
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">จันทร์</td>
-	@foreach ($ccs as $cc)
-    <td><center>{{$cc->subject}}</center></td>
+	@foreach ($mon as $mm)
+    <td><center>{{$mm->subject}}</center></td>
 	@endforeach
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">อังคาร</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    @foreach ($tu as $tue)
+    <td><center>{{$tue->subject}}</center></td>
+	@endforeach
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พุธ</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    @foreach ($wed as $we)
+    <td><center>{{$we->subject}}</center></td>
+	@endforeach
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พฤหัส</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    @foreach ($thu as $th)
+    <td><center>{{$th->subject}}</center></td>
+	@endforeach
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">ศุกร์</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    @foreach ($fri as $fr)
+    <td><center>{{$fr->subject}}</center></td>
+	@endforeach
   </tr>
 </table>
 </body>

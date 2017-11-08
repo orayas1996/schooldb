@@ -25,10 +25,5 @@
 			return view('searchtable');
 		} 
 		
-		public function table()
-		{
-			 $ccs = Education::all()->where('grade','6')->sortBy('period');//->orderBy('period','asc');
-			return view('schedule', ['ccs' => $ccs]);
-		}
 		
 	}

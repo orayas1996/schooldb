@@ -32,6 +32,18 @@
 			]);
 		}
 		
+		public function indexgrade($grade)
+		{
+			$students = Students::all()->where('grade',$grade);
+			return view('students.indexForm', ['students' => $students]);
+		}
+		
+		public function indexgraderoom($grade, $room)
+		{
+			$students = Students::all()->where('grade',$grade)->where('room',$room);
+			return view('students.indexForm', ['students' => $students]);
+		}
+		
 		public function detail($id)
 		{
 			$student = Students::findOrFail($id);

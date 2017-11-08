@@ -47,7 +47,7 @@
 
 <br>
 <center>
-<form action="/students/index">
+<form action="/students/searchstudent">
     <input type="submit" value="Back">
 	</form>
 </center>

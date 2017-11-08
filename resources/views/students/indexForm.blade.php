@@ -39,7 +39,7 @@
 	</table><br>
 	<form action="/students/insertpage"><input type="submit" value="Add Student"></form>
 	<br>
-	</form><form action="/home"><input type="submit" value="Back"></form>
+	</form><form action="/students/searchstudent"><input type="submit" value="Back"></form>
 
 </body>
 </html>
