@@ -17,13 +17,13 @@
 		
 		public function searchscore()
 		{
-			return view('searchscore');
+			return view('score.searchscore');
 		}
 		
 		public function searchtable()
 		{
-			return view('searchtable');
-		} 
+			return view('schedule.searchtable');
+		}
 		
 		public function loginpage()
 		{

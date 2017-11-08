@@ -7,15 +7,15 @@
 <center>
 	<h1>All Officials</h1>
 	<table border=2><tr bgcolor"#FF0000";>
-		<td width="150"><center>ssn</center></td>
-		<td width="200"><center>name</center></td>
-		<td width="30"><center>sex</center></td>
-		<td width="200"><center>address</center></td>
-		<td width="100"><center>teacherroom</center></td>
-		<td width="60"><center>club</center></td>
-		<td width="50"><center>Edit</center></td>
-		<td width="50"><center>Delete</center></td>
-		<td width="50"><center>Details</center></td>
+		<th width="150"><center>ssn</center></th>
+		<th width="200"><center>name</center></th>
+		<th width="30"><center>sex</center></th>
+		<th width="200"><center>address</center></th>
+		<th width="100"><center>teacherroom</center></th>
+		<th width="60"><center>club</center></th>
+		<th width="50"><center>Edit</center></th>
+		<th width="50"><center>Delete</center></th>
+		<th width="50"><center>Details</center></th>
 	</tr>
 
         @foreach ($officials as $official)

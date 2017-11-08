@@ -77,10 +77,13 @@ $router->get('/student/{grade}/all','StudentController@indexgrade');
 //STUDENTS IN ROOM
 $router->get('/studentin/{grade}/{room}','StudentController@indexgraderoom');
 //STUDENT
+$router->get('/student/{id}/detail','StudentController@detail');
 $router->get('/student/{id}/delete','StudentController@delete');
 $router->get('/student/{id}/editpage','StudentController@editpage');
 $router->post('/student/{id}/editsave','StudentController@editsave');
-$router->get('/student/{id}/detail','StudentController@detail');
+//DETAIL SCORE
+$router->post('/students/searchingscore','StudentController@searchscore');
+$router->get('student/{id}/score', 'StudentController@scoredetail');
 //OFFICIALS
 $router->get('/officials/index', 'OfficialController@index');
 $router->get('/officials/insertpage','OfficialController@insertpage');
@@ -93,6 +96,16 @@ $router->post('/official/{ssn}/editsave','OfficialController@editsave');
 $router->get('/official/{id}/detail','OfficialController@detail');
 //SCHEDULE
 $router->get('/schedule/{grade}/{room}', 'TableController@table');
+//CLUBS
+$router->get('/clubs', 'ClubController@allclubs');
+$router->get('/clubs/insertpage','ClubController@insertpage');
+$router->post('/clubs/save','ClubController@save');
+//CLUB
+$router->get('/club/{id}/detail','ClubController@detail');
+$router->get('/club/{id}/delete','ClubController@delete');
+$router->get('/club/{id}/editpage','ClubController@editpage');
+$router->post('/club/{id}/editsave','ClubController@editsave');
+
 
 $router->get('/', 'IndexController@index');
 

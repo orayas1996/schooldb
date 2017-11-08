@@ -21,7 +21,7 @@
 			$username = $request->input('username');
 			$password = $request->input('password');
 			
-			$check = DB::table('users')->where(['username'=>$username,'password'=>$password])->get();
+			$check = DB::table('officials')->where(['username'=>$username,'password'=>$password])->get();
 			if(count($check) >0)
 			{
 				echo "Login Success!";

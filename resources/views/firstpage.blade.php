@@ -27,6 +27,10 @@
     <td height="50" align="center" bgcolor="#FF9966"><a href="/score">ผลการเรียน</a></td>
     <td align="left" valign="middle">&nbsp;ตรวจสอบผลการเรียนใหม่และเก่าของนักเรียน</td>
   </tr>
+  <tr>
+    <td height="50" align="center" bgcolor="#FF9966"><a href="/clubs">ชมรม</a></td>
+    <td align="left" valign="middle">&nbsp;รายชื่อชมรมทั้งหมดภายในโรงเรียน</td>
+  </tr>
 </table>
 </body>
 </html>

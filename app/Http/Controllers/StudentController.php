@@ -24,6 +24,19 @@
 			return view('students.searchstudent');
 		}
 		
+		public function searchscore(Request $request)
+		{
+			$id = $request->input('id');
+			$student = Students::findOrFail($id);
+			return view('score.graddetail')->with('student',$student);
+		}
+		
+		public function scoredetail($id)
+		{
+			$student = Students::findOrFail($id);
+			return view('score.graddetail')->with('student', $student);
+		}
+		
 		public function index()
 		{
 		    $students = Students::all();

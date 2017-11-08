@@ -10,7 +10,7 @@
 	{
 		public function search()
 		{
-			return view('schedule');
+			return view('schedule.schedule');
 		}
 		
 		public function table($grade, $room)
@@ -20,7 +20,7 @@
 			$wed = Education::all()->where('grade',$grade)->where('room',$room)->where('day',3)->sortBy('period');
 			$thu = Education::all()->where('grade',$grade)->where('room',$room)->where('day',4)->sortBy('period');
 			$fri = Education::all()->where('grade',$grade)->where('room',$room)->where('day',5)->sortBy('period');
-			return view('schedule', ['mon' => $mon,
+			return view('schedule.schedule', ['mon' => $mon,
 										'tue' => $tue,
 										'wed' => $wed,
 										'thu' => $thu,

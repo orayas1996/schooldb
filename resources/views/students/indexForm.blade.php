@@ -7,17 +7,17 @@
 <center>
 	<h1>All Students</h1>
 	<table border=1><tr bgcolor"#FF0000">
-		<td width="100"><center>student_id</center></td>
-		<td width="150"><center>student_ssn</center></td>
-		<td width="200"><center>student_name</center></td>
-		<td width="30"><center>sex</center></td>
-		<td width="30"><center>age</center></td>
-		<td width="200"><center>address</center></td>
-		<td width="30"><center>grade</center></td>
-		<td width="30"><center>room</center></td>
-		<td width="50"><center>Edit</center></td>
-		<td width="50"><center>Delete</center></td>
-		<td width="50"><center>Details</center></td>
+		<th width="100"><center>student_id</center></th>
+		<th width="150"><center>student_ssn</center></th>
+		<th width="200"><center>student_name</center></th>
+		<th width="30"><center>sex</center></th>
+		<th width="30"><center>age</center></th>
+		<th width="200"><center>address</center></th>
+		<th width="30"><center>grade</center></th>
+		<th width="30"><center>room</center></th>
+		<th width="50"><center>Edit</center></th>
+		<th width="50"><center>Delete</center></th>
+		<th width="50"><center>Details</center></th>
 	</tr>
     
         @foreach ($students as $student)
