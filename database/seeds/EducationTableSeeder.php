@@ -14,17 +14,17 @@ class EducationTableSeeder extends Seeder
         DB::table('education')->insert([
             'grade' => '1',
             'room' => '1',
-            'subjects' =>'MA101',
-            'day' => '1',
-            'period' => '1',
+            'subject' =>'MA001',
+            'day' => 1,
+            'period' => 1,
             'place' => '311'
         ]);
         DB::table('education')->insert([
             'grade' => '1',
             'room' => '1',
-            'subjects' =>'MA101',
-            'day' => '3',
-            'period' => '1',
+            'subject' =>'MA001',
+            'day' => 3,
+            'period' => 1,
             'place' => '311'
         ]);
     }
