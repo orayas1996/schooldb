@@ -13,7 +13,7 @@
 <table>
   <tr>
     <th height="40" align="center" colspan="1" rowspan="1"  valign="middle">อาจารย์ที่ปรึกษา</th>
-	@foreach ($teachers as teacher)
+	@foreach ($teachers as $teacher)
 	<tr>
 		<td>{{$teacher->name}}</td>
 	</tr>
