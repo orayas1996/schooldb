@@ -25,5 +25,10 @@
 			return view('searchtable');
 		} 
 		
+		public function loginpage()
+		{
+			return view('officiallogin');
+		}
+		
 		
 	}

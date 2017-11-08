@@ -4,25 +4,28 @@
 <title>School</title>
 </head>
 <body>
-<table width="753" height="368" align="center">
+<table width="783" height="400" align="center">
+	<tr>
+		<td height="30" colspan="2" align="right" valign="top"><a href="/officials/login">Login</a></td>
+	</tr>
   <tr>
-    <td height="197" colspan="2" align="center" valign="middle" bgcolor="#FFCCCC">โรงเรียนมัธยมหมีน้อย</td>
+    <td height="200" colspan="2" align="center" valign="middle" bgcolor="#FFCCCC"><h1>โรงเรียนมัธยมหมีน้อย</h1></td>
   </tr>
   <tr>
-    <td width="168" height="36" align="center" valign="middle" bgcolor="#FF9966"><a href="/students/searchstudent">นักเรียน</a></td>
-    <td width="574" align="center" valign="middle">รายละเอียดข้อมูลนักเรียน</td>
+    <td width="168" height="50" align="center" valign="middle" bgcolor="#FF9966"><a href="/students/searchstudent">นักเรียน</a></td>
+    <td width="574" align="left" valign="middle">&nbsp;รายละเอียดข้อมูลนักเรียน</td>
   </tr>
   <tr>
-    <td height="40" align="center" valign="middle" bgcolor="#FF9966"><a href="/officials/index">บุคคลากร</a></td>
-    <td align="center" valign="middle">รายละเอียดข้อมูลคุณครู</td>
+    <td height="50" align="center" valign="middle" bgcolor="#FF9966"><a href="/officials/index">บุคคลากร</a></td>
+    <td align="left" valign="middle">&nbsp;รายละเอียดข้อมูลคุณครู</td>
   </tr>
   <tr>
-    <td height="38" align="center" valign="middle" bgcolor="#FF9966"><a href="/table">ตารางเรียน</a></td>
-    <td align="center" valign="middle">รายละเอียดราตางเรียนของนักเรียนแต่ละชั้นปี</td>
+    <td height="50" align="center" valign="middle" bgcolor="#FF9966"><a href="/table">ตารางเรียน</a></td>
+    <td align="left" valign="middle">&nbsp;รายละเอียดราตางเรียนของนักเรียนแต่ละชั้นปี</td>
   </tr>
   <tr>
-    <td align="center" bgcolor="#FF9966"><a href="/score">ผลการเรียน</a></td>
-    <td align="center" valign="middle">ตรวจสอบผลการเรียนใหม่และเก่าของนักเรียน</td>
+    <td height="50" align="center" bgcolor="#FF9966"><a href="/score">ผลการเรียน</a></td>
+    <td align="left" valign="middle">&nbsp;ตรวจสอบผลการเรียนใหม่และเก่าของนักเรียน</td>
   </tr>
 </table>
 </body>

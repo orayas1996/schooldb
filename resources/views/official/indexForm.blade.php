@@ -4,18 +4,18 @@
 	<title>Official Index</title>
 </head>
 <body>
-
-	<h1>All Officals</h1>
+<center>
+	<h1>All Officials</h1>
 	<table border=2><tr bgcolor"#FF0000";>
-		<td><center>ssn</center></td>
-		<td><center>name</center></td>
-		<td><center>sex</center></td>
-		<td><center>address</center></td>
-		<td><center>teacherroom</center></td>
-		<td><center>club</center></td>
-		<td><center>Edit</center></td>
-		<td><center>Delete</center></td>
-		<td><center>Details</center></td>
+		<td width="150"><center>ssn</center></td>
+		<td width="200"><center>name</center></td>
+		<td width="30"><center>sex</center></td>
+		<td width="200"><center>address</center></td>
+		<td width="100"><center>teacherroom</center></td>
+		<td width="60"><center>club</center></td>
+		<td width="50"><center>Edit</center></td>
+		<td width="50"><center>Delete</center></td>
+		<td width="50"><center>Details</center></td>
 	</tr>
 
         @foreach ($officials as $official)

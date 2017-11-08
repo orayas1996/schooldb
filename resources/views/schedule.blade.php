@@ -41,6 +41,7 @@
           <td>
           <center>
           ว่าง
+		  <br><font size="-1">-</font>
           </center>
           </td>
           @endif
@@ -51,6 +52,7 @@
       <td>
       <center>
       ว่าง
+	  <br><font size="-1">-</font>
       </center>
       </td>
       @endfor
@@ -73,7 +75,8 @@
           @if ( $tu->period > $var)
           <td>
           <center>
-          ว่าง
+			ว่าง
+			<br><font size="-1">-</font>
           </center>
           </td>
           @endif
@@ -84,6 +87,7 @@
       <td>
       <center>
       ว่าง
+	  <br><font size="-1">-</font>
       </center>
       </td>
       @endfor
@@ -107,6 +111,7 @@
   				<td>
   				<center>
   				ว่าง
+				<br><font size="-1">-</font>
   				</center>
   				</td>
           @endif
@@ -116,7 +121,8 @@
       @for(;$var <= 8; $var++)
       <td>
       <center>
-      ว่าง
+		ว่าง
+	  <br><font size="-1">-</font>
       </center>
       </td>
       @endfor
@@ -140,6 +146,7 @@
   				<td>
   				<center>
   				ว่าง
+				<br><font size="-1">-</font>
   				</center>
   				</td>
           @endif
@@ -149,7 +156,8 @@
       @for(;$var <= 8; $var++)
       <td>
       <center>
-      ว่าง
+		ว่าง
+	 <br><font size="-1">-</font>
       </center>
       </td>
       @endfor
@@ -173,6 +181,7 @@
           <td>
           <center>
           ว่าง
+		  <br><font size="-1">-</font>
           </center>
           </td>
           @endif
@@ -183,6 +192,7 @@
       <td>
       <center>
       ว่าง
+	  <br><font size="-1">-</font>
       </center>
       </td>
       @endfor

@@ -7,24 +7,18 @@
 
 <h1><center>Search Score</center></h1>
 
-<form action="score.blade.php" method="get" name="search" target="_self" id="search">
+<form action="score.blade.php" method="get">
 <center>
 <table>
 <tr>
-	<td><label for="keyword">รหัสนักเรียน:</label></td>
-	<td><input type="text" name="keyword" id="keyword" value=""></td>
-</tr>
-<tr>
-	<td><label for="keyword">ภาคการศึกษา:</label></td>
-	<td><input type="text" name="keyword" id="keyword" value=""></td>
+	<td width="25%" align="right"><label for="id">รหัสนักเรียน:</label></td>
+	<td><input type="text" name="id" value=""></td>
+	<td width="25%"><input type="submit" name="search" value="ค้นหา"></td>
 </tr>
 </table>  
 </center>
-  <br>
-  
-<center>
-	<input type="submit" name="button" id="button" value="ค้นหา"></form>
-</center><br>
+</form>
+<br>
 <center>
 	<form action="/home"><input type="submit" value="Back"></form>
 </center>

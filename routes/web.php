@@ -64,8 +64,10 @@ $router->get('/student/{id}', function($id){
 });
 //HOMEPAGE
 $router->get('/home', 'PageController@homepage');
+$router->get('/officials/login', 'PageController@loginpage');
 $router->get('/score', 'PageController@searchscore');
 $router->get('/table', 'PageController@searchtable');
+
 //STUDENTS
 $router->get('/students/searchstudent', 'StudentController@searchstudent');
 $router->get('/students/index', 'StudentController@index');
@@ -84,6 +86,7 @@ $router->get('/officials/index', 'OfficialController@index');
 $router->get('/officials/insertpage','OfficialController@insertpage');
 $router->post('/officials/save','OfficialController@save');
 //OFFICIAL
+$router->post('/official/login', 'OfficialController@login');
 $router->get('/official/{ssn}/delete','OfficialController@delete');
 $router->get('/official/{ssn}/editpage','OfficialController@editpage');
 $router->post('/official/{ssn}/editsave','OfficialController@editsave');

@@ -4,20 +4,20 @@
 	<title>Student Index</title>
 </head>
 <body>
-
+<center>
 	<h1>All Students</h1>
-	<table border=2><tr bgcolor"#FF0000";>
-		<td><center>student_id</center></td>
-		<td><center>student_ssn</center></td>
-		<td><center>student_name</center></td>
-		<td><center>sex</center></td>
-		<td><center>age</center></td>
-		<td><center>address</center></td>
-		<td><center>grade</center></td>
-		<td><center>room</center></td>
-		<td><center>Edit</center></td>
-		<td><center>Delete</center></td>
-		<td><center>Details</center></td>
+	<table border=1><tr bgcolor"#FF0000">
+		<td width="100"><center>student_id</center></td>
+		<td width="150"><center>student_ssn</center></td>
+		<td width="200"><center>student_name</center></td>
+		<td width="30"><center>sex</center></td>
+		<td width="30"><center>age</center></td>
+		<td width="200"><center>address</center></td>
+		<td width="30"><center>grade</center></td>
+		<td width="30"><center>room</center></td>
+		<td width="50"><center>Edit</center></td>
+		<td width="50"><center>Delete</center></td>
+		<td width="50"><center>Details</center></td>
 	</tr>
     
         @foreach ($students as $student)
