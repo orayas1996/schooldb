@@ -24,42 +24,75 @@
 
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">จันทร์</td>
-	@foreach ($mon as $mm)
-    <td>
-	<center>
-		{{$mm->subject}}<br>
-		<font size="-1">{{$mm->place}}</font>
-	</center>
-	</td>
-	@endforeach
+    <?php $var = 1; ?>
+    @foreach ($mon as $tu)
+      @for (; $var <= 8; $var++)
+        @if ( $tu->period === $var)
+          <td>
+          <center>
+          {{$tu->subject}}<br>
+          <font size="-1">{{$tu->place}}</font>
+          </center>
+          </td>
+            <?php $var++; ?>
+          @break;
+        @else
+          @if ( $tu->period > $var)
+          <td>
+          <center>
+          ว่าง
+          </center>
+          </td>
+          @endif
+        @endif
+      @endfor
+    @endforeach
+      @for(;$var <= 8; $var++)
+      <td>
+      <center>
+      ว่าง
+      </center>
+      </td>
+      @endfor
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">อังคาร</td>
-	@foreach ($tue as $tu)
-		@for ($i = 1; $i <= 8; $i++)
-			@if ( $tu->period === $i)
-				<td>
-				<center>
-				{{$tu->subject}}<br>
-				<font size="-1">{{$tu->place}}</font>
-				</center>
-				</td>
-			@else
-				<td>
-				<center>
-				ว่าง
-				</center>
-				</td>
-			@endif
-		@endfor
-	@endforeach
+    <?php $var = 1; ?>
+    @foreach ($tue as $tu)
+      @for (; $var <= 8; $var++)
+        @if ( $tu->period === $var)
+          <td>
+          <center>
+          {{$tu->subject}}<br>
+          <font size="-1">{{$tu->place}}</font>
+          </center>
+          </td>
+            <?php $var++; ?>
+          @break;
+        @else
+          @if ( $tu->period > $var)
+          <td>
+          <center>
+          ว่าง
+          </center>
+          </td>
+          @endif
+        @endif
+      @endfor
+    @endforeach
+      @for(;$var <= 8; $var++)
+      <td>
+      <center>
+      ว่าง
+      </center>
+      </td>
+      @endfor
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พุธ</td>
-
+    <?php $var = 1; ?>
     @foreach ($wed as $tu)
   		@for (; $var <= 8; $var++)
-          <?php echo $var; ?>
         @if ( $tu->period === $var)
   				<td>
   				<center>
@@ -90,25 +123,69 @@
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พฤหัส</td>
-    @foreach ($thu as $th)
-    <td>
-	<center>
-		{{$th->subject}}<br>
-		<font size="-1">{{$th->place}}</font>
-	</center>
-	</td>
-	@endforeach
+    <?php $var = 1; ?>
+    @foreach ($thu as $tu)
+  		@for (; $var <= 8; $var++)
+        @if ( $tu->period === $var)
+  				<td>
+  				<center>
+  				{{$tu->subject}}<br>
+  				<font size="-1">{{$tu->place}}</font>
+  				</center>
+  				</td>
+            <?php $var++; ?>
+          @break;
+  			@else
+          @if ( $tu->period > $var)
+  				<td>
+  				<center>
+  				ว่าง
+  				</center>
+  				</td>
+          @endif
+  			@endif
+  		@endfor
+  	@endforeach
+      @for(;$var <= 8; $var++)
+      <td>
+      <center>
+      ว่าง
+      </center>
+      </td>
+      @endfor
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">ศุกร์</td>
-    @foreach ($fri as $fr)
-    <td>
-	<center>
-		{{$fr->subject}}<br>
-		<font size="-1">{{$fr->place}}</font>
-	</center>
-	</td>
-	@endforeach
+    <?php $var = 1; ?>
+    @foreach ($fri as $tu)
+      @for (; $var <= 8; $var++)
+        @if ( $tu->period === $var)
+          <td>
+          <center>
+          {{$tu->subject}}<br>
+          <font size="-1">{{$tu->place}}</font>
+          </center>
+          </td>
+            <?php $var++; ?>
+          @break;
+        @else
+          @if ( $tu->period > $var)
+          <td>
+          <center>
+          ว่าง
+          </center>
+          </td>
+          @endif
+        @endif
+      @endfor
+    @endforeach
+      @for(;$var <= 8; $var++)
+      <td>
+      <center>
+      ว่าง
+      </center>
+      </td>
+      @endfor
   </tr>
 </table>
 </body>
