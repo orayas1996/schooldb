@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Schedule</title>
 </head>
-
+  <?php $var = 1; ?>
 <body>
 <table width="907" height="311" cellpadding="9" border=1>
   <caption>
@@ -21,6 +21,7 @@
     <td width="85">14.00-15.00</td>
     <td width="85">15.00-16.00</td>
   </tr>
+
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">จันทร์</td>
 	@foreach ($mon as $mm)
@@ -43,7 +44,6 @@
 				<font size="-1">{{$tu->place}}</font>
 				</center>
 				</td>
-				@break
 			@else
 				<td>
 				<center>
@@ -56,14 +56,37 @@
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พุธ</td>
-    @foreach ($wed as $we)
-    <td>
-	<center>
-		{{$we->subject}}<br>
-		<font size="-1">{{$we->place}}</font>
-	</center>
-	</td>
-	@endforeach
+
+    @foreach ($wed as $tu)
+  		@for (; $var <= 8; $var++)
+          <?php echo $var; ?>
+        @if ( $tu->period === $var)
+  				<td>
+  				<center>
+  				{{$tu->subject}}<br>
+  				<font size="-1">{{$tu->place}}</font>
+  				</center>
+  				</td>
+            <?php $var++; ?>
+          @break;
+  			@else
+          @if ( $tu->period > $var)
+  				<td>
+  				<center>
+  				ว่าง
+  				</center>
+  				</td>
+          @endif
+  			@endif
+  		@endfor
+  	@endforeach
+      @for(;$var <= 8; $var++)
+      <td>
+      <center>
+      ว่าง
+      </center>
+      </td>
+      @endfor
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พฤหัส</td>

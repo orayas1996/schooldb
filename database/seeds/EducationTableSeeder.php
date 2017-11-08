@@ -27,5 +27,21 @@ class EducationTableSeeder extends Seeder
             'period' => 1,
             'place' => '311'
         ]);
+        DB::table('education')->insert([
+            'grade' => '1',
+            'room' => '1',
+            'subject' =>'GG191',
+            'day' => 3,
+            'period' => 4,
+            'place' => '211'
+        ]);
+        DB::table('education')->insert([
+            'grade' => '1',
+            'room' => '1',
+            'subject' =>'GG191',
+            'day' => 3,
+            'period' => 5,
+            'place' => '211'
+        ]);
     }
 }
