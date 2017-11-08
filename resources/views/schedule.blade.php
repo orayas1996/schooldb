@@ -8,7 +8,7 @@
 <body>
 <table width="907" height="311" cellpadding="9" border=1>
   <caption>
-    ตารางเรียน
+    <h1>ตารางเรียน ชั้น ม.<?php echo $grade ?>/<?php echo $room ?></h1>
   </caption>
   <tr>
     <td width="85" align="center" valign="middle" bgcolor="#FF9999">วัน/เวลา</td>
@@ -24,31 +24,67 @@
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">จันทร์</td>
 	@foreach ($mon as $mm)
-    <td><center>{{$mm->subject}}</center></td>
+    <td>
+	<center>
+		{{$mm->subject}}<br>
+		<font size="-1">{{$mm->place}}</font>
+	</center>
+	</td>
 	@endforeach
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">อังคาร</td>
-    @foreach ($tu as $tue)
-    <td><center>{{$tue->subject}}</center></td>
+	@foreach ($tue as $tu)
+		@for ($i = 1; $i <= 8; $i++)
+			@if ( $tu->period === $i)
+				<td>
+				<center>
+				{{$tu->subject}}<br>
+				<font size="-1">{{$tu->place}}</font>
+				</center>
+				</td>
+				@break
+			@else
+				<td>
+				<center>
+				ว่าง
+				</center>
+				</td>
+			@endif
+		@endfor
 	@endforeach
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พุธ</td>
     @foreach ($wed as $we)
-    <td><center>{{$we->subject}}</center></td>
+    <td>
+	<center>
+		{{$we->subject}}<br>
+		<font size="-1">{{$we->place}}</font>
+	</center>
+	</td>
 	@endforeach
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พฤหัส</td>
     @foreach ($thu as $th)
-    <td><center>{{$th->subject}}</center></td>
+    <td>
+	<center>
+		{{$th->subject}}<br>
+		<font size="-1">{{$th->place}}</font>
+	</center>
+	</td>
 	@endforeach
   </tr>
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">ศุกร์</td>
     @foreach ($fri as $fr)
-    <td><center>{{$fr->subject}}</center></td>
+    <td>
+	<center>
+		{{$fr->subject}}<br>
+		<font size="-1">{{$fr->place}}</font>
+	</center>
+	</td>
 	@endforeach
   </tr>
 </table>
