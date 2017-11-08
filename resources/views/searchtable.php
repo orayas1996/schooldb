@@ -20,11 +20,9 @@
 		<td><a href="/schedule/1/5">ห้อง5</a></td>
 	</tr>
 	</table>
-	</center>
 
 <br>
 
-	<center>
 	<table>
 	<tr>
 		<tr>
@@ -36,14 +34,12 @@
 		<td><a href="/schedule/2/5">ห้อง5</a></td>
 	</tr>
 	</table>
-	</center>
 
 <br>
 
-	<center>
 	<table>
 	<tr>
-		<td>มัธยมศึกษาปีที่3:</td>
+		<td>มัธยมศึกษาปีที่3 :</td>
 		<td><a href="/schedule/6/1">ห้อง1</a></td>
 		<td><a href="/schedule/6/2">ห้อง2</a></td>
 		<td><a href="/schedule/6/3">ห้อง3</a></td>
@@ -51,7 +47,6 @@
 		<td><a href="/schedule/6/5">ห้อง5</a></td>
 	</tr>
 	</table>
-	<center>
 
 <br>
 <center>
