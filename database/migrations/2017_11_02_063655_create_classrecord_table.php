@@ -15,7 +15,7 @@ class CreateClassRecordTable extends Migration
     {
         Schema::create('class_record', function (Blueprint $table) {
             $table->string('grade',1);
-            $table->string('room',2);
+            $table->string('room',1);
             $table->string('year');
       			$table->string('student_id',5);
             $table->timestamps();

@@ -16,7 +16,6 @@ class CreateClubsTable extends Migration
         Schema::create('clubs', function (Blueprint $table) {
           $table->string('id',5);
 			    $table->string('name');
-			    $table->string('time'); /**เวลาเรียน*/
           $table->timestamps();
 
           $table->primary('id');

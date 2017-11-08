@@ -15,15 +15,14 @@ class CreateEducationTable extends Migration
     {
         Schema::create('education', function (Blueprint $table) {
            $table->string('grade',1);
-    		   $table->string('room',2);
+    		   $table->string('room',1);
     		   $table->string('subject',5);
-    		   $table->string('time');
-           $table->integer('day');
-           $table->integer('period');
+           $table->integer('day',1);
+           $table->integer('period',1);
     		   $table->string('place');
            $table->timestamps();
 
-           $table->primary(['grade','room','subject']);
+           $table->primary(['grade','room','subject','day','period']);
            $table->foreign('subject')->references('id')->on('subjects');
         });
     }
