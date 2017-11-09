@@ -18,7 +18,6 @@ class CreateScoreTable extends Migration
       		  $table->string('year');
       		  $table->string('subject',5);
       		  $table->integer('totalscore');
-      		  $table->integer('behave_score');
             $table->timestamps();
 
             $table->primary(['student_id','year','subject']);
