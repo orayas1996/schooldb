@@ -30,5 +30,10 @@
 			return view('officiallogin');
 		}
 		
+		public function searchsubject()
+		{
+			return view('subjects.search');
+		}
+		
 		
 	}

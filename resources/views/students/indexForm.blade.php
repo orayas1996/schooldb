@@ -10,9 +10,6 @@
 		<th width="100"><center>student_id</center></th>
 		<th width="150"><center>student_ssn</center></th>
 		<th width="200"><center>student_name</center></th>
-		<th width="30"><center>sex</center></th>
-		<th width="30"><center>age</center></th>
-		<th width="200"><center>address</center></th>
 		<th width="30"><center>grade</center></th>
 		<th width="30"><center>room</center></th>
 		<th width="50"><center>Edit</center></th>
@@ -25,9 +22,6 @@
 				<td><center>{{$student->id}}</center></td>
 				<td><center>{{$student->ssn}}</center></td>
 				<td>{{$student->name}}</td>
-				<td><center>{{$student->sex}}</center></td>
-				<td><center>{{$student->age}}</center></td>
-				<td>{{$student->address}}</td>
 				<td><center>{{$student->grade}}</center></td>
 				<td><center>{{$student->room}}</center></td>
 				<td><center><a href="/student/{{$student->id}}/editpage">Click</a></center></td>

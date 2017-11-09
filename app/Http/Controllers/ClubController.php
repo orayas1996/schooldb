@@ -8,6 +8,7 @@
 	use App\Models\Official;
 	use App\Clubs;
 	use App\Officials;
+	use App\Students;
 
 
 	class ClubController extends Controller
@@ -32,9 +33,10 @@
 		{
 			$club = Clubs::findOrFail($id);
 			$teachers = Officials::all()->where('club',$id);
-			//$teachers = Officials::all()->where('club',$id);
-			//return $teachers->first()->name;
-			return view('club.clubdetail',['teachers' => $teachers])->with('club',$club);
+			$students = Students::all();
+			return view('club.clubdetail',['teachers' => $teachers,
+										'students' => $students])
+										->with('club',$club);
 		}
 
 		public function save(Request $request)

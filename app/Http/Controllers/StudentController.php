@@ -74,9 +74,14 @@
 			$student->address=$request->input('address');
 			$student->room=$request->input('room');
 			$student->grade=$request->input('grade');
-			$student->save();
 			
-			echo "Add Success!!";
+			if(empty($student->id)) {
+				echo "<br><br><center><h3>Primarykey Cannot be empty!</h3><br><br>" ;	
+			}
+			else{
+				$student->save(); 
+				echo "<center>Adding Success!";
+			}
 			echo"<form action=\"/students/index\">
 			<input type=\"submit\" value=\"Go To Students\">
 			</form>";
@@ -86,7 +91,7 @@
 		{
 			$student = Student::findOrFail($id);
 			$student->delete();
-			echo "Delete Success!!";
+			echo "<center>Delete Success!!";
 			echo"<form action=\"/students/index\">
 			<input type=\"submit\" value=\"Go To Students\">
 			</form>";
@@ -104,7 +109,7 @@
 			$student->room=$request->input('room');
 			$student->grade=$request->input('grade');
 			$student->save();
-			echo "Edit Success!!";
+			echo "<center>Edit Success!!";
 			echo"<form action=\"/students/index\">
 			<input type=\"submit\" value=\"Go To Students\">
 			</form>";

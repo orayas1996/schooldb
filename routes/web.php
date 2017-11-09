@@ -67,6 +67,7 @@ $router->get('/home', 'PageController@homepage');
 $router->get('/officials/login', 'PageController@loginpage');
 $router->get('/score', 'PageController@searchscore');
 $router->get('/table', 'PageController@searchtable');
+$router->get('/subjects', 'PageController@searchsubject');
 
 //STUDENTS
 $router->get('/students/searchstudent', 'StudentController@searchstudent');
@@ -105,7 +106,16 @@ $router->get('/club/{id}/detail','ClubController@detail');
 $router->get('/club/{id}/delete','ClubController@delete');
 $router->get('/club/{id}/editpage','ClubController@editpage');
 $router->post('/club/{id}/editsave','ClubController@editsave');
-
+//SUBJECTS
+$router->get('/subjects/index', 'SubjectController@index');
+$router->get('/subjects/index/{grade}', 'SubjectController@searchbygrade');
+$router->get('/subjects/insertpage', 'SubjectController@insertpage');
+$router->post('/subjects/save','SubjectController@save');
+//SUBJECT
+$router->get('/subject/{id}/detail', 'SubjectController@detail');
+$router->get('/subject/{id}/editpage', 'SubjectController@editpage');
+$router->post('/subject/{id}/editsave', 'SubjectController@editsave');
+$router->get('/subject/{id}/delete','SubjectController@delete');
 
 $router->get('/', 'IndexController@index');
 

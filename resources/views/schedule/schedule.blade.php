@@ -6,6 +6,7 @@
 </head>
   <?php $var = 1; ?>
 <body>
+<center>
 <table width="907" height="311" cellpadding="9" border=1>
   <caption>
     <h1>ตารางเรียน ชั้น ม.<?php echo $grade ?>/<?php echo $room ?></h1>
@@ -198,5 +199,10 @@
       @endfor
   </tr>
 </table>
+<br>
+</form>
+	<form action="/table">
+    <input type="submit" value="Back">
+	</form>
 </body>
 </html>

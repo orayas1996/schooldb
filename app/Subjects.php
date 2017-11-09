@@ -12,7 +12,7 @@ class Subjects extends Model
     {
         return $this->belongsTOMany('App\Students','score');
     }
-    public function class()
+    public function classes()
     {
         return $this->belongsTOMany('App\Classrooms','education');
     }

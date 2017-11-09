@@ -20,6 +20,10 @@
     <td align="left" valign="middle">&nbsp;รายละเอียดข้อมูลคุณครู</td>
   </tr>
   <tr>
+    <td height="50" align="center" valign="middle" bgcolor="#FF9966"><a href="/subjects">วิชาเรียน</a></td>
+    <td align="left" valign="middle">&nbsp;รายละเอียดของวิชาทั้งหมด</td>
+  </tr>
+  <tr>
     <td height="50" align="center" valign="middle" bgcolor="#FF9966"><a href="/table">ตารางเรียน</a></td>
     <td align="left" valign="middle">&nbsp;รายละเอียดราตางเรียนของนักเรียนแต่ละชั้นปี</td>
   </tr>
