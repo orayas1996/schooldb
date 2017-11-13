@@ -20,7 +20,8 @@
 
 		public function editpage($id)
 		{
-			return view('club.editForm')->with('id',$id);
+			$club = Clubs::findOrFail($id);
+			return view('club.editForm')->with('club',$club)->with('id',$id);
 		}
 
 		public function allclubs()
@@ -33,7 +34,7 @@
 		{
 			$club = Clubs::findOrFail($id);
 			$teachers = Officials::all()->where('club',$id);
-			$students = Students::all();
+			$students = Students::all()->where('club',$id);
 			return view('club.clubdetail',['teachers' => $teachers,
 										'students' => $students])
 										->with('club',$club);
@@ -44,9 +45,14 @@
 			$club = new Club;
 			$club->id=$request->input('id');
 			$club->name=$request->input('name');
-			$club->save();
-
-			echo "Add Success!!";
+			if(empty($club->id)) {
+				echo "<br><br><center><h3>ID Cannot be empty!</h3><br>
+				Adding Fail!<br>" ;	
+			}
+			else{
+				$club->save(); 
+				echo "<center>Adding Success!";
+			}
 			echo"<form action=\"/clubs\">
 			<input type=\"submit\" value=\"Go To Clubs\">
 			</form>";
@@ -56,7 +62,7 @@
 		{
 			$club = Club::findOrFail($id);
 			$club->delete();
-			echo "Delete Success!!";
+			echo "<br><br><center>Delete Success!!<br>";
 			echo"<form action=\"/clubs\">
 			<input type=\"submit\" value=\"Go To Clubs\">
 			</form>";
@@ -68,7 +74,7 @@
 			//$student->id=$request->input('id');
 			$club->name=$request->input('name');
 			$club->save();
-			echo "Edit Success!!";
+			echo "<br><br><center>Edit Success!!<br>";
 			echo"<form action=\"/clubs\">
 			<input type=\"submit\" value=\"Go To Clubs\">
 			</form>";

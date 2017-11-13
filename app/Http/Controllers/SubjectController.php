@@ -30,7 +30,8 @@
 		
 		public function editpage($id)
 		{
-			return view('subjects.editForm')->with('id',$id);
+			$subject = Subject::findOrFail($id);
+			return view('subjects.editForm')->with('subject',$subject)->with('id',$id);
 		}
 		
 		
@@ -59,13 +60,20 @@
 			$subject = new Subject;
 			$subject->id=$request->input('id');
 			$subject->name=$request->input('name');
+			$subject->grade=$request->input('grade');
 			$subject->time=$request->input('time');
 			$subject->year=$request->input('year');
 			$subject->sj_teacher=$request->input('sj_teacher');
 			$subject->detail=$request->input('detail');
-			$subject->save();
+			if(empty($subject->id)) {
+				echo "<br><br><center><h3>ID Cannot be empty!</h3><br>
+				Adding Fail!<br>" ;	
+			}
+			else{
+				$subject->save(); 
+				echo "<center>Adding Success!";
+			}
 			
-			echo "Add Success!!";
 			echo"<form action=\"/subjects/index\">
 			<input type=\"submit\" value=\"Go To Subjects\">
 			</form>";
@@ -76,12 +84,13 @@
 			$subject = Subject::findOrFail($id);
 			//$student->id=$request->input('id');
 			$subject->name=$request->input('name');
+			$subject->grade=$request->input('grade');
 			$subject->time=$request->input('time');
 			$subject->year=$request->input('year');
 			$subject->sj_teacher=$request->input('sj_teacher');
 			$subject->detail=$request->input('detail');
 			$subject->save();
-			echo "Edit Success!!";
+			echo "<br><br><center>Edit Success!!<br>";
 			echo"<form action=\"/subjects/index\">
 			<input type=\"submit\" value=\"Go To Subjects\">
 			</form>";
@@ -91,7 +100,7 @@
 		{
 			$subject = Subject::findOrFail($id);
 			$subject->delete();
-			echo "Delete Success!!";
+			echo "<br><br><center>Delete Success!!<br>";
 			echo"<form action=\"/subjects/index\">
 			<input type=\"submit\" value=\"Go To Subjects\">
 			</form>";

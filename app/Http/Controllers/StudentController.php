@@ -16,7 +16,8 @@
 		
 		public function editpage($id)
 		{
-			return view('students.editForm')->with('id',$id);
+			$student = Students::findOrFail($id);
+			return view('students.editForm')->with('student',$student)->with('id',$id);
 		}
 		
 		public function searchstudent()
@@ -76,11 +77,12 @@
 			$student->grade=$request->input('grade');
 			
 			if(empty($student->id)) {
-				echo "<br><br><center><h3>Primarykey Cannot be empty!</h3><br><br>" ;	
+				echo "<br><br><center><h3>ID Cannot be empty!</h3><br>
+				Adding Fail!<br>" ;	
 			}
 			else{
 				$student->save(); 
-				echo "<center>Adding Success!";
+				echo "<br><br><center>Adding Success!";
 			}
 			echo"<form action=\"/students/index\">
 			<input type=\"submit\" value=\"Go To Students\">

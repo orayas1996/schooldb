@@ -16,6 +16,10 @@
 			<td><input type="text" name="name"></td>
 		</tr>
 		<tr>
+			<td>Grade : </td>
+			<td><input type="text" name="grade"></td>
+		</tr>
+		<tr>
 			<td>Exam_Date : </td>
 			<td><input type="text" name="time"></td>
 		</tr>

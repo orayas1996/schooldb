@@ -40,7 +40,7 @@
 
 <br>
 <center>
-<form action="/students/index">
+<form action="/officials/index">
     <input type="submit" value="Back">
 	</form>
 </center>

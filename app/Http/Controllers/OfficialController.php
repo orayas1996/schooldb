@@ -43,7 +43,8 @@
 
   		public function editpage($ssn)
   		{
-  			return view('official.editForm')->with('ssn',$ssn);
+			$teacher = Officials::findOrFail($ssn);
+  			return view('official.editForm')->with('official',$teacher)->with('ssn',$ssn);
   		}
 
       public function save(Request $request)
@@ -55,9 +56,14 @@
   			$official->address=$request->input('address');
   			$official->teacherroom=$request->input('teacherroom');
   			$official->club=$request->input('club');
-  			$official->save();
-
-  			echo "Add Success!!";
+  			if(empty($official->ssn)) {
+				echo "<br><br><center><h3>SSN cannot be empty!</h3><br>
+				Adding Fail!<br>" ;	
+			}
+			else{
+				$official->save(); 
+				echo "<center>Adding Success!";
+			}
   			echo"<form action=\"/officials/index\">
   			<input type=\"submit\" value=\"Go To Officials\">
   			</form>";

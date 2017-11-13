@@ -15,7 +15,7 @@
 		</tr>-->
 		<tr>
 			<td>Name : </td>
-			<td><input type="text" name="name"></td>
+			<td><input type="text" name="name" value="<?php echo $club->name; ?>"></td>
 		</tr>
 	</table>
 	<br>

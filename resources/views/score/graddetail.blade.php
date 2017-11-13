@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>student detail</title>
+<title>grade detail</title>
 </head>
 <body>
 <h1><center>ผลการเรียน</center></h1>
@@ -14,6 +14,10 @@
 </table>
 <br>
   <table border=1>
+  <tr>
+	<th align="center" colspan="2" bgcolor="lightgray">คะแนนความประพฤติ</th>
+	<td align="center">{{$student->behave_score}}</td>
+  </tr>
   <tr>
     <td align="center" valign="middle" rowspan="7" width="200">มัธยมศึกษาปีที่ 1</td>
 	<th align="center" valign="middle" width="150" bgcolor="lightgray">รายวิชา

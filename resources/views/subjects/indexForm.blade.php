@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Student Index</title>
+	<title>subject Index</title>
 </head>
 <body>
 <center>
