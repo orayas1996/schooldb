@@ -1,24 +1,17 @@
-<<<<<<< HEAD
 @extends('layouts.app')
 <!DOCTYPE html>
 @section('content')
 <div>
 
-<form class="navbar-form navbar-right" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
-  </div>
-  <button type="submit" class="btn btn-default">ค้นหา</button>
-</form>
-<!------------------------------------------------------------->
+<p class="navbar-text navbar-right"><a href="/officials/login" class="navbar-link">Log in</a></p>
 
-<div class="page-header glyphicon glyphicon-heart">
+
+<!------------------------------------------------------------->
+ <div class="glyphicon glyphicon-heart page-header ">
   <h1>Bare Bears School   <small>welcome to our site</small></h1>
 </div>
   <br>
   <br>
-
-
 
 <div class="row"><div class="col-sm-1 col-md-3"><div class="thumbnail">
       <img src="http://www.mx7.com/i/2a3/AUD737.jpg" alt="">
@@ -39,19 +32,45 @@
 <div class="col-sm-1 col-md-3"><div class="thumbnail">
       <img src="http://www.mx7.com/i/1d2/1S6EmH.jpg" alt="">
       <div class="caption">
-        <h3>ตารางเรียน</h3>
-        <p>รายละเอียดตารางสอนของนักเรียน</p>
+        <h3>วิชาเรียน</h3>
+        <p>รายละเอียดวิชาที่เปิดสอนทั้งหมด</p>
 		<br>
-         <li role="presentation" class="disabled"><a href="/table">ค้นหาข้อมูลตารางสอน</a></li>
+         <li role="presentation" class="disabled"><a href="/subjects">ค้นหาข้อมูลวิชาที่เปิดสอน</a></li>
+      </div></div></div>
+<div class="col-sm-1 col-md-3"><div class="thumbnail">
+      <img src="http://www.mx7.com/i/2a3/AUD737.jpg" alt="">
+      <div class="caption">
+        <h3>ชมรม</h3>
+        <p>รายละเอียดกิจกรรมนอกเวลาเรียนของนักเรียน</p>
+		<br>
+         <li role="presentation" class="disabled"><a href="/table">ค้นหาข้อมูลชมรม</a></li>
+      </div></div></div>
+<div class="col-sm-1 col-md-3"><div class="thumbnail">
+      <img src="http://www.mx7.com/i/250/xnxdER.jpg" alt="">
+      <div class="caption">
+        <h3>ตารางเรียน</h3>
+        <p>รายละเอียดข้อมูลตารางเรียนของนักเรียน</p>
+		<br>
+        <li role="presentation" class="disabled"><a href="/score">ค้นหาตารางเรียน</a></li>
+      </div></div></div>
+<div class="col-sm-1 col-md-3"><div class="thumbnail">
+      <img src="http://www.mx7.com/i/250/xnxdER.jpg" alt="">
+      <div class="caption">
+        <h3>ตารางสอบ</h3>
+        <p>รายละเอียดข้อมูลตารางสอบของนักเรียน</p>
+		<br>
+        <li role="presentation" class="disabled"><a href="/clubs">ค้นหาตารางสอบ</a></li>
       </div></div></div>
 <div class="col-sm-1 col-md-3"><div class="thumbnail">
       <img src="http://www.mx7.com/i/250/xnxdER.jpg" alt="">
       <div class="caption">
         <h3>ผลการเรียน</h3>
-        <p>รายละเอียดข้อมูลผลการเรียนทุกภาคการศึกษาของนักเรียน</p>
+        <p>ผลการเรียนทุกภาคการศึกษาของนักเรียน</p>
 		<br>
-        <li role="presentation" class="disabled"><a href="/score">ค้นหาข้อมูลผลการเรียน</a></li>
+        <li role="presentation" class="disabled"><a href="#">ค้นหาผลการเรียน</a></li>
       </div></div></div>
+	  
+	  
 	  
 	  
 </div>
@@ -61,47 +80,3 @@
 </div>
 
 @endsection
-=======
-
-<!DOCTYPE html>
-
-<html>
-<head>
-<title>School</title>
-</head>
-<body>
-<table width="783" height="400" align="center">
-	<tr>
-		<td height="30" colspan="2" align="right" valign="top"><a href="/officials/login">Login</a></td>
-	</tr>
-  <tr>
-    <td height="200" colspan="2" align="center" valign="middle" bgcolor="#FFCCCC"><h1>โรงเรียนมัธยมหมีน้อย</h1></td>
-  </tr>
-  <tr>
-    <td width="168" height="50" align="center" valign="middle" bgcolor="#FF9966"><a href="/students/searchstudent">นักเรียน</a></td>
-    <td width="574" align="left" valign="middle">&nbsp;รายละเอียดข้อมูลนักเรียน</td>
-  </tr>
-  <tr>
-    <td height="50" align="center" valign="middle" bgcolor="#FF9966"><a href="/officials/index">บุคคลากร</a></td>
-    <td align="left" valign="middle">&nbsp;รายละเอียดข้อมูลคุณครู</td>
-  </tr>
-  <tr>
-    <td height="50" align="center" valign="middle" bgcolor="#FF9966"><a href="/subjects">วิชาเรียน</a></td>
-    <td align="left" valign="middle">&nbsp;รายละเอียดของวิชาทั้งหมด</td>
-  </tr>
-  <tr>
-    <td height="50" align="center" valign="middle" bgcolor="#FF9966"><a href="/table">ตารางเรียน</a></td>
-    <td align="left" valign="middle">&nbsp;รายละเอียดราตางเรียนของนักเรียนแต่ละชั้นปี</td>
-  </tr>
-  <tr>
-    <td height="50" align="center" bgcolor="#FF9966"><a href="/score">ผลการเรียน</a></td>
-    <td align="left" valign="middle">&nbsp;ตรวจสอบผลการเรียนใหม่และเก่าของนักเรียน</td>
-  </tr>
-  <tr>
-    <td height="50" align="center" bgcolor="#FF9966"><a href="/clubs">ชมรม</a></td>
-    <td align="left" valign="middle">&nbsp;รายชื่อชมรมทั้งหมดภายในโรงเรียน</td>
-  </tr>
-</table>
-</body>
-</html>
->>>>>>> 86fca526efe6767d3cb32bb07dcfbe8beb6f6b8c

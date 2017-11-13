@@ -1,26 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Schedule</title>
-</head>
+@extends('layouts.app')
+<!DOCTYPE html>
+@section('content')
+
   <?php $var = 1; ?>
-<body>
+
 <center>
-<table width="907" height="311" cellpadding="9" border=1>
+<br>
+<br>
+<table class="table table-striped" width="907" height="311" cellpadding="9" border=1>
   <caption>
-    <h1>ตารางเรียน ชั้น ม.<?php echo $grade ?>/<?php echo $room ?></h1>
+    <h2><center>ตารางเรียน ชั้น ม.<?php echo $grade ?>/<?php echo $room ?></center></h2>
   </caption>
   <tr>
     <td width="85" align="center" valign="middle" bgcolor="#FF9999">วัน/เวลา</td>
-    <td width="85">08.00-09.00</td>
-    <td width="85">09.00-10.00</td>
-    <td width="85">10.00-11.00</td>
-    <td width="85">11.00-12.00</td>
-    <td width="85">12.00-13.00</td>
-    <td width="85">13.00-14.00</td>
-    <td width="85">14.00-15.00</td>
-    <td width="85">15.00-16.00</td>
+    <td width="85"><center>08.00-09.00</center></td>
+    <td width="85"><center>09.00-10.00</center></td>
+    <td width="85"><center>10.00-11.00</center></td>
+    <td width="85"><center>11.00-12.00</center></td>
+    <td width="85"><center>12.00-13.00</center></td>
+    <td width="85"><center>13.00-14.00</center></td>
+    <td width="85"><center>14.00-15.00</center></td>
+    <td width="85"><center>15.00-16.00</center></td>
   </tr>
 
   <tr>
@@ -202,7 +202,6 @@
 <br>
 </form>
 	<form action="/table">
-    <input type="submit" value="Back">
+    <input class="btn" type="submit" value="กลับ">
 	</form>
-</body>
-</html>
+@endsection

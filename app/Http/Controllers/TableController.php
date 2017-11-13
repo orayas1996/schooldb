@@ -10,7 +10,9 @@
 	{
 		public function search()
 		{
-			return view('schedule.schedule');
+			return view('schedule.schedule',[
+			'title'=>'searchschedule'
+			]);
 		}
 		
 		public function table($grade, $room)
@@ -26,7 +28,7 @@
 										'thu' => $thu,
 										'fri' => $fri,
 										'grade' => $grade,
-										'room' => $room]);
+										'room' => $room],['title'=>'scheduletable']);
 		}
 		
 	}

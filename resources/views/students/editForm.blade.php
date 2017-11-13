@@ -1,52 +1,55 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Edit Form</title>
-</head>
-<body>
+@section('content')
 
+<div class="page-header ">
+<h2>แก้ไขข้อมูลนักเรียน</h2>
+</div><br><br>
+<center>
 	<form action='/student/<?php echo $id; ?>/editsave' method="post">
-	<table>
+	<table class="table table-striped">
 		<!--<tr>
 			<td>StudentID : </td>
 			<td><input type="text" name="id"></td>
 		</tr>-->
 		<tr>
 			<td>SSN : </td>
-			<td><input type="text" name="ssn" value="<?php echo $student->ssn; ?>"></td>
+			<td><input class="form-control" type="text" name="ssn"></td>
 		</tr>
 		<tr>
 			<td>Name : </td>
-			<td><input type="text" name="name" value="<?php echo $student->name; ?>"></td>
+			<td><input class="form-control" type="text" name="name"></td>
 		</tr>
 		<tr>
 			<td>Sex : </td>
-			<td><input type="text" name="sex" value="<?php echo $student->sex; ?>"></td>
+			<td><input class="form-control" type="text" name="sex"></td>
 		</tr>
 		<tr>
 			<td>Age : </td>
-			<td><input type="number" name="age" value="<?php echo $student->age; ?>"></td>
+			<td><input class="form-control" type="number" name="age"></td>
 		</tr>
 		<tr>
 			<td>Address : </td>
-			<td><input type="text" name="address" value="<?php echo $student->address; ?>"></td>
+			<td><input class="form-control" type="text" name="address"></td>
 		</tr>
 		<tr>
 			<td>Grade : </td>
-			<td><input type="text" name="grade" value="<?php echo $student->grade; ?>"></td>
+			<td><input class="form-control" type="text" name="grade"></td>
 		</tr>
 		<tr>
 			<td>Room : </td>
-			<td><input type="text" name="room" value="<?php echo $student->room; ?>"></td>
+			<td><input class="form-control" type="text" name="room"></td>
 		</tr>
+		</table>
 		<tr>
-			<td><input type="submit" name="submit" value="Edit"></td>
+			<td><input class="btn btn-info" type="submit" name="submit" value="แก้ไขเสร็จสิ้น"></td>
 		</tr>
-	</table>
 	</form>
+	<br>
 	<form action="/students/index">
-    <input type="submit" value="Back">
+    <input class="btn" type="submit" value="กลับ">
 	</form>
+	</center>
+	
+@endsection
 
-</body>
-</html>

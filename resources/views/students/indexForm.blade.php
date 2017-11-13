@@ -1,12 +1,15 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Student Index</title>
-</head>
-<body>
-<center>
-	<h1>All Students</h1>
-	<table border=1><tr bgcolor"#FF0000">
+@section('content')
+
+	
+<div class="page-header ">
+<h2>ข้อมูลนักเรียนทั้งหมด</h2>
+</div>
+  <br>
+  <br>
+<center>  
+	<table class="table table-striped" border=2><tr bgcolor"#FF0000">
 		<th width="100"><center>student_id</center></th>
 		<th width="150"><center>student_ssn</center></th>
 		<th width="200"><center>student_name</center></th>
@@ -26,22 +29,14 @@
 				<td><center>{{$student->room}}</center></td>
 				<td><center><a href="/student/{{$student->id}}/editpage">Click</a></center></td>
 				<td><center><a href="/student/{{$student->id}}/delete">Click</a></center></td>
-<<<<<<< HEAD
-			</tr>
-		@endforeach
-	</table><br>
-	
-<center><a href="/students/insertpage">ADD</a></
-=======
 				<td><center><a href="/student/{{$student->id}}/detail">Click</a></center></td>
 			</tr>
 		@endforeach
 	</table><br>
 	</table><br>
-	<form action="/students/insertpage"><input type="submit" value="Add Student"></form>
+	<form action="/students/insertpage"><input class="btn btn-primary" type="submit" value="เพิ่มนักเรียน"></form>
 	<br>
-	</form><form action="/students/searchstudent"><input type="submit" value="Back"></form>
+	</form><form action="/students/searchstudent"><input class="btn" type="submit" value="กลับ"></form>
 
->>>>>>> 86fca526efe6767d3cb32bb07dcfbe8beb6f6b8c
-</body>
-</html>
+
+@endsection	

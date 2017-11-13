@@ -1,48 +1,51 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Insert Form</title>
-</head>
-<body>
+@section('content')
+
+<div class="page-header ">
+<h2>เพิ่มข้อมูลวิชา</h2>
+</div>
+  <br>
+  <br>
+  <center>
 
 	<form action='/subjects/save' method="post">
-	<table>
+	<table class="table table-striped">
 		<tr>
 			<td>SubjectID : </td>
-			<td><input type="text" name="id"></td>
+			<td><input class="form-control"  type="text" name="id"></td>
 		</tr>
 		<tr>
 			<td>Name : </td>
-			<td><input type="text" name="name"></td>
-		</tr>
-		<tr>
-			<td>Grade : </td>
-			<td><input type="text" name="grade"></td>
+			<td><input class="form-control"  type="text" name="name"></td>
 		</tr>
 		<tr>
 			<td>Exam_Date : </td>
-			<td><input type="text" name="time"></td>
+			<td><input class="form-control"  type="text" name="time"></td>
 		</tr>
 		<tr>
 			<td>Year : </td>
-			<td><input type="number" name="year"></td>
+			<td><input class="form-control"  type="number" name="year"></td>
 		</tr>
 		<tr>
 			<td>Teacher : </td>
-			<td><input type="text" name="sj_teacher"></td>
+			<td><input class="form-control"  type="text" name="sj_teacher"></td>
 		</tr>
 		<tr>
 			<td>Details : </td>
-			<td><input type="text" name="detail"></td>
+			<td><input class="form-control" type="text" name="detail"></td>
 		</tr>
-		<tr>
-			<td><input type="submit" name="submit" value="Add"></td>
-		</tr>
+		
 	</table>
+	<tr>
+			<td><input class="btn btn-success" type="submit" name="submit" value="เพื่ม"></td>
+		</tr>
 	</form>
+	<br>
+	
 	<form action="/subjects/index">
-    <input type="submit" value="Back">
+    <input class="btn" type="submit" value="กลับ">
 	</form>
+	</center>
 
-</body>
-</html>
+@endsection

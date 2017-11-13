@@ -1,48 +1,46 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Edit Form</title>
-</head>
-<body>
+@section('content')
+
+<div class="page-header ">
+<h2>แก้ไขข้อมูลวิชา</h2>
+</div><br><br>
+<center>
 
 	<form action='/subject/<?php echo $id; ?>/editsave' method="post">
-	<table>
+	<table class="table table-striped">
 		<!--<tr>
 			<td>StudentID : </td>
 			<td><input type="text" name="id"></td>
 		</tr>-->
 		<tr>
 			<td>Name : </td>
-			<td><input type="text" name="name" value="<?php echo $subject->name; ?>"></td>
-		</tr>
-		<tr>
-			<td>Grade : </td>
-			<td><input type="text" name="grade" value="<?php echo $subject->grade; ?>"></td>
+			<td><input class="form-control" type="text" name="name"></td>
 		</tr>
 		<tr>
 			<td>Exam_Date : </td>
-			<td><input type="text" name="time" value="<?php echo $subject->time; ?>"></td>
+			<td><input class="form-control" type="text" name="time"></td>
 		</tr>
 		<tr>
 			<td>Year : </td>
-			<td><input type="number" name="year" value="<?php echo $subject->year; ?>"></td>
+			<td><input class="form-control" type="number" name="year"></td>
 		</tr>
 		<tr>
 			<td>Teacher : </td>
-			<td><input type="text" name="sj_teacher" value="<?php echo $subject->sj_teacher; ?>"></td>
+			<td><input class="form-control" type="text" name="sj_teacher"></td>
 		</tr>
 		<tr>
 			<td>Details : </td>
-			<td><input type="text" name="detail" value="<?php echo $subject->detail; ?>"></td>
+			<td><input class="form-control" type="text" name="detail"></td>
 		</tr>
-		<tr>
-			<td><input type="submit" name="submit" value="Edit"></td>
-		</tr>
+		
 	</table>
+	<tr>
+			<td><input class="btn btn-info" type="submit" name="submit" value="แก้ไขเสร็จสิ้น"></td>
+		</tr>
 	</form>
+	<br>
 	<form action="/subjects/index">
-    <input type="submit" value="Back">
+    <input class="btn" type="submit" value="กลับ">
 	</form>
-
-</body>
-</html>
+@endsection
