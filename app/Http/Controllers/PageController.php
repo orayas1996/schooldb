@@ -9,7 +9,8 @@
 	{
 		public function homepage()
 		{
-			return view('firstpage');
+			return view('firstpage',[
+			'title'=> 'School']);
 		}	
 		
 		public function searchscore()
