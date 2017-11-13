@@ -30,7 +30,7 @@
 		@endforeach
 	</table><br>
 	</table><br>
-	<div><form action="/officials/insertpage"><input class ="btn btn-primary " type="submit" value="อาจารย์ทั้งหมด"></form>
+	<div><form action="/officials/insertpage"><input class ="btn btn-primary " type="submit" value="เพิ่มข้อมูลอาจารย์"></form>
 	<br></div>
 	
 	<div></form><form action="/home"><input class="btn " type="submit" value="กลับ"></form></div>
