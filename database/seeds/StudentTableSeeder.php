@@ -18,6 +18,7 @@ class StudentTableSeeder extends Seeder
             'sex' => 'm',
             'age' => 11,
             'address' => 'Etiam vel neque in odio',
+            'behave_score' => '10'
             'grade' => '3',
             'room' => '1'
         ]);
@@ -28,6 +29,7 @@ class StudentTableSeeder extends Seeder
             'sex' => 'm',
             'age' => 11,
             'address' => 'Aenean euismod lacus ut',
+            'behave_score' => '10'
             'grade' => '1',
             'room' => '2'
         ]);

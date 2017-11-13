@@ -20,6 +20,7 @@ class CreateStudentsTable extends Migration
       			$table->string('sex');
       			$table->integer('age');
       			$table->string('address');
+            $table->integer('behave_score'); //มีทำไม??
       			$table->string('room');
       			$table->string('grade');  /**ชั้น*/
             $table->timestamps();
