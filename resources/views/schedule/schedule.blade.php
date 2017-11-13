@@ -6,6 +6,7 @@
 </head>
   <?php $var = 1; ?>
 <body>
+<center>
 <table width="907" height="311" cellpadding="9" border=1>
   <caption>
     <h1>ตารางเรียน ชั้น ม.<?php echo $grade ?>/<?php echo $room ?></h1>
@@ -25,22 +26,22 @@
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">จันทร์</td>
     <?php $var = 1; ?>
-    @foreach ($mon as $tu)
+    @foreach ($mon as $p)
       @for (; $var <= 8; $var++)
-        @if ( $tu->period === $var)
-          <td>
+        @if ( $p->period === $var)
+          <th>
           <center>
-          {{$tu->subject}}<br>
-          <font size="-1">{{$tu->place}}</font>
+          {{$p->subject}}<br>
+          <font size="-1">{{$p->place}}</font>
           </center>
-          </td>
+          </th>
             <?php $var++; ?>
           @break;
         @else
-          @if ( $tu->period > $var)
+          @if ( $p->period > $var)
           <td>
           <center>
-          ว่าง
+			ว่าง
 		  <br><font size="-1">-</font>
           </center>
           </td>
@@ -51,7 +52,7 @@
       @for(;$var <= 8; $var++)
       <td>
       <center>
-      ว่าง
+		ว่าง
 	  <br><font size="-1">-</font>
       </center>
       </td>
@@ -60,19 +61,19 @@
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">อังคาร</td>
     <?php $var = 1; ?>
-    @foreach ($tue as $tu)
+    @foreach ($tue as $p)
       @for (; $var <= 8; $var++)
-        @if ( $tu->period === $var)
-          <td>
+        @if ( $p->period === $var)
+          <th>
           <center>
-          {{$tu->subject}}<br>
-          <font size="-1">{{$tu->place}}</font>
+          {{$p->subject}}<br>
+          <font size="-1">{{$p->place}}</font>
           </center>
-          </td>
+          </th>
             <?php $var++; ?>
           @break;
         @else
-          @if ( $tu->period > $var)
+          @if ( $p->period > $var)
           <td>
           <center>
 			ว่าง
@@ -86,7 +87,7 @@
       @for(;$var <= 8; $var++)
       <td>
       <center>
-      ว่าง
+		ว่าง
 	  <br><font size="-1">-</font>
       </center>
       </td>
@@ -95,19 +96,19 @@
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พุธ</td>
     <?php $var = 1; ?>
-    @foreach ($wed as $tu)
+    @foreach ($wed as $p)
   		@for (; $var <= 8; $var++)
-        @if ( $tu->period === $var)
-  				<td>
+        @if ( $p->period === $var)
+  				<th>
   				<center>
-  				{{$tu->subject}}<br>
-  				<font size="-1">{{$tu->place}}</font>
+  				{{$p->subject}}<br>
+  				<font size="-1">{{$p->place}}</font>
   				</center>
-  				</td>
+  				</th>
             <?php $var++; ?>
           @break;
   			@else
-          @if ( $tu->period > $var)
+          @if ( $p->period > $var)
   				<td>
   				<center>
   				ว่าง
@@ -130,19 +131,19 @@
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">พฤหัส</td>
     <?php $var = 1; ?>
-    @foreach ($thu as $tu)
+    @foreach ($thu as $p)
   		@for (; $var <= 8; $var++)
-        @if ( $tu->period === $var)
-  				<td>
+        @if ( $p->period === $var)
+  				<th>
   				<center>
-  				{{$tu->subject}}<br>
-  				<font size="-1">{{$tu->place}}</font>
+  				{{$p->subject}}<br>
+  				<font size="-1">{{$p->place}}</font>
   				</center>
-  				</td>
+  				</th>
             <?php $var++; ?>
           @break;
   			@else
-          @if ( $tu->period > $var)
+          @if ( $p->period > $var)
   				<td>
   				<center>
   				ว่าง
@@ -165,22 +166,22 @@
   <tr>
     <td align="center" valign="middle" bgcolor="#FF9999">ศุกร์</td>
     <?php $var = 1; ?>
-    @foreach ($fri as $tu)
+    @foreach ($fri as $p)
       @for (; $var <= 8; $var++)
-        @if ( $tu->period === $var)
-          <td>
+        @if ( $p->period === $var)
+          <th>
           <center>
-          {{$tu->subject}}<br>
-          <font size="-1">{{$tu->place}}</font>
+          {{$p->subject}}<br>
+          <font size="-1">{{$p->place}}</font>
           </center>
-          </td>
+          </th>
             <?php $var++; ?>
           @break;
         @else
-          @if ( $tu->period > $var)
+          @if ( $p->period > $var)
           <td>
           <center>
-          ว่าง
+			ว่าง
 		  <br><font size="-1">-</font>
           </center>
           </td>
@@ -191,12 +192,17 @@
       @for(;$var <= 8; $var++)
       <td>
       <center>
-      ว่าง
+		ว่าง
 	  <br><font size="-1">-</font>
       </center>
       </td>
       @endfor
   </tr>
 </table>
+<br>
+</form>
+	<form action="/table">
+    <input type="submit" value="Back">
+	</form>
 </body>
 </html>

@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Officials extends Model
 {
     public $incrementing = false;
+	
+	protected $primaryKey = 'ssn';
 
     public function class()
     {

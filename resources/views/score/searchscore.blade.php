@@ -7,7 +7,7 @@
 
 <h1><center>Search Score</center></h1>
 
-<form action="score.blade.php" method="get">
+<form action="/students/searchingscore" method="post">
 <center>
 <table>
 <tr>

@@ -40,11 +40,11 @@
 	<table>
 	<tr>
 		<td>มัธยมศึกษาปีที่3 :</td>
-		<td><a href="/schedule/6/1">ห้อง1</a></td>
-		<td><a href="/schedule/6/2">ห้อง2</a></td>
-		<td><a href="/schedule/6/3">ห้อง3</a></td>
-		<td><a href="/schedule/6/4">ห้อง4</a></td>
-		<td><a href="/schedule/6/5">ห้อง5</a></td>
+		<td><a href="/schedule/3/1">ห้อง1</a></td>
+		<td><a href="/schedule/3/2">ห้อง2</a></td>
+		<td><a href="/schedule/3/3">ห้อง3</a></td>
+		<td><a href="/schedule/3/4">ห้อง4</a></td>
+		<td><a href="/schedule/3/5">ห้อง5</a></td>
 	</tr>
 	</table>
 

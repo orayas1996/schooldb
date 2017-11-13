@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Classrooms extends Model
 {
     public $incrementing = false;
+	
+	protected $primaryKey = 'grade';
 
     public function students()
     {

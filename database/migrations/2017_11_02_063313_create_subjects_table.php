@@ -15,13 +15,14 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->string('id',5);
+            $table->string('grade');
       			$table->string('name');
       			$table->string('time');
       			$table->string('year');
       			$table->string('sj_teacher',13);
             $table->timestamps();
 
-            $table->primary('id');
+            $table->primary('id','year');
             $table->foreign('sj_teacher')->references('ssn')->on('officials');
         });
     }
