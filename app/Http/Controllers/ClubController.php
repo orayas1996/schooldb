@@ -15,19 +15,19 @@
 	{
 		public function insertpage()
 		{
-			return view('club.insertForm',['title'=>'insertclub']);
+			return view('club.insertForm');
 		}
 
 		public function editpage($id)
 		{
 			$club = Clubs::findOrFail($id);
-			return view('club.editForm',['title'=>'editclub'])->with('club',$club)->with('id',$id);
+			return view('club.editForm')->with('club',$club)->with('id',$id);
 		}
 
 		public function allclubs()
 		{
 			$clubs = Clubs::all();
-			return view('club.clubsindex',['clubs' => $clubs],['title'=>'Club']);
+			return view('club.clubsindex',['clubs' => $clubs]);
 		}
 
 		public function detail($id)
@@ -36,8 +36,7 @@
 			$teachers = Officials::all()->where('club',$id);
 			$students = Students::all()->where('club',$id);
 			return view('club.clubdetail',['teachers' => $teachers,
-										'students' => $students],[
-										'title'=>'clubdetail'])
+										'students' => $students])
 										->with('club',$club);
 		}
 

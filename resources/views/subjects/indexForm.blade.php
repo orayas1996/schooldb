@@ -1,16 +1,12 @@
-@extends('layouts.app')
 <!DOCTYPE html>
-@section('content')
-
-	
-<div class="page-header ">
-<h2>ข้อมูลวิชาทั้งหมด</h2>
-</div>
-  <br>
-  <br>
+<html>
+<head>
+	<title>subject Index</title>
+</head>
+<body>
 <center>
-	
-	<table class="table table-striped" border=2><tr bgcolor"#FF0000">
+	<h1>All Students</h1>
+	<table border=1><tr bgcolor"#FF0000">
 		<th width="100"><center>subject ID</center></th>
 		<th width="200"><center>subject Name</center></th>
 		<th width="200"><center>Exam Date</center></th>
@@ -31,8 +27,9 @@
 		@endforeach
 	</table><br>
 	</table><br>
-	<form action="/subjects/insertpage"><input class="btn btn-primary" type="submit" value="เพิ่มวิชา"></form>
+	<form action="/subjects/insertpage"><input type="submit" value="Add Subject"></form>
 	<br>
-	</form><form action="/subjects"><input class="btn" type="submit" value="กลับ"></form>
+	</form><form action="/subjects"><input type="submit" value="Back"></form>
 
-@endsection
+</body>
+</html>

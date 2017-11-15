@@ -1,14 +1,12 @@
-@extends('layouts.app')
 <!DOCTYPE html>
-@section('content')
-
-<div class="page-header ">
-  <h2>ข้อมูลชมรมทั้งหมด</h2>
-</div>
-  <br>
-  <br>
-  <center>
-	<table class="table table-striped" border=2 bgcolor"#FF0000"><tr bgcolor"#FF0000">
+<html>
+<head>
+	<title>Club Index</title>
+</head>
+<body>
+<center>
+	<h1>All Clubs</h1>
+	<table border=1><tr bgcolor"#FF0000">
 		<th width="100"><center>Club_ID</center></th>
 		<th width="150"><center>Club_name</center></th>
 		<th width="50"><center>Edit</center></th>
@@ -27,8 +25,9 @@
 		@endforeach
 	</table><br>
 	</table><br>
-	<form action="/clubs/insertpage"><input class="btn btn-success" type="submit" value="เพิ่มชมรม"></form>
+	<form action="/clubs/insertpage"><input type="submit" value="Add Club"></form>
 	<br>
-	</form><form action="/home"><input class="btn" type="submit" value="กลับ"></form>
+	</form><form action="/home"><input type="submit" value="Back"></form>
 
-@endsection
+</body>
+</html>

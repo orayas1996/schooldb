@@ -1,15 +1,13 @@
-@extends('layouts.app')
 <!DOCTYPE html>
-@section('content')
-
+<html>
+<head>
+<title>teacher detail</title>
+</head>
+<body>
+<h1><center>ข้อมูลบุคลากร</center></h1>
 
 <center>
-<div class="page-header ">
-<h2>ข้อมูลอาจารย์</h2>
-</div>
-
-<center>
-<table class="table table-striped" width="500" height="530" border=2>
+<table width="500" height="530" border=1>
   <tr align="right" valign="middle">
     <td height="150" colspan="2">&nbsp;</td>
   </tr>
@@ -43,7 +41,10 @@
 <br>
 <center>
 <form action="/officials/index">
-    <input class="btn" type="submit" value="กลับ">
+    <input type="submit" value="Back">
 	</form>
 </center>
-@endsection
+
+<body>
+</body>
+</html>

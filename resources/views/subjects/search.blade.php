@@ -1,30 +1,34 @@
-@extends('layouts.app')
 <!DOCTYPE html>
-@section('content')
+<html>
+<head>
+<title>grade index</title>
 
-<div>
-<div class="page-header ">
-  <h2>ค้นหาวิชาที่เปิดสอน</h2>
-</div>
-  <br>
-  <br>
+</head>
+<body>
 
 <center>
-	
-<div class="list-group">
-  <a href="/subjects/index/1" class="list-group-item list-group-item-success">มัธยมศึกษาปีที่1</a>
-  <a href="/subjects/index/2" class="list-group-item list-group-item-info">มัธยมศึกษาปีที่2</a>
-  <a href="/subjects/index/3" class="list-group-item list-group-item-danger">มัธยมศึกษาปีที่3</a>
-  
-</div>
+	<table>
+	<tr>
+		<td><center><h1>วิชาประจำชั้น</h1></center></td>
+	</tr>
+	<tr>
+		<td><a href="/subjects/index/1"><center>มัธยมศึกษาปีที่1</center></a></td>
+		</tr>
+		<tr>
+		<td><a href="/subjects/index/2"><center>มัธยมศึกษาปีที่2</center></a></td>
+		</tr>
+		<tr>
+		<td><a href="/subjects/index/3"><center>มัธยมศึกษาปีที่3</center></a></td>
+	</tr>
+	</table>
 
 	<br>
 	
 	<br>
-	<form action="/subjects/index"><input class ="btn btn-primary " type="submit" value="วิชาทั้งหมด"></form>
+	<form action="/subjects/index"><input type="submit" value="All Subjects"></form>
 	<br>
-	<form action="/home"><input  class="btn " type="submit" value="กลับ"></form>	
+	<form action="/home"><input type="submit" value="Back"></form>	
 </form>
-</div>
 
-@endsection
+</body>
+</html>

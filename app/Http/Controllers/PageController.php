@@ -12,31 +12,27 @@
 	{
 		public function homepage()
 		{
-			return view('firstpage',[
-			'title'=> 'School']);
+			return view('firstpage');
 		}	
 		
 		public function searchscore()
 		{
-			return view('score.searchscore',[
-			'title'=>'Score']);
+			return view('score.searchscore');
 		}
 		
 		public function searchtable()
 		{
-			return view('schedule.searchtable',[
-			'title'=>'Table']);
+			return view('schedule.searchtable');
 		}
 		
 		public function loginpage()
 		{
-			return view('officiallogin',['title'=>'loginpage']);
+			return view('officiallogin');
 		}
 		
 		public function searchsubject()
 		{
-			return view('subjects.search',[
-			'title'=> 'subject']);
+			return view('subjects.search');
 		}
 		
 		public function searchexam()

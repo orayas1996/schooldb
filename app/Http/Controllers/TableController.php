@@ -11,9 +11,7 @@
 	{
 		public function search()
 		{
-			return view('schedule.schedule',[
-			'title'=>'searchschedule'
-			]);
+			return view('schedule.schedule');
 		}
 		
 		public function table($grade, $room)
@@ -29,7 +27,7 @@
 										'thu' => $thu,
 										'fri' => $fri,
 										'grade' => $grade,
-										'room' => $room],['title'=>'scheduletable']);
+										'room' => $room]);
 		}
 		
 		public function examdetail($grade)

@@ -1,34 +1,30 @@
-@extends('layouts.app')
 <!DOCTYPE html>
-@section('content')
-
-
-	
-<div class="page-header ">
-<h2>เพิ่มวิชา</h2>
-</div>
-  <br>
-  <br>
-  <center>
+<html>
+<head>
+	<title>Insert Form</title>
+</head>
+<body>
+<center>
+<h1>Adding Club</h1>
 
 	<form action='/clubs/save' method="post">
-	<table >
+	<table>
 		<tr>
-			<td align="right">รหัสชมรม:&nbsp;&nbsp;</td>
-			<td><input  type="text" name="id"></td>
+			<td align="right">ClubID : </td>
+			<td><input type="text" name="id"></td>
 		</tr>
-		<tr><td>&nbsp;</td></tr>
 		<tr>
-			<td align="right">ชื่อชมรม:&nbsp;&nbsp;</td>
-			<td><input  type="text" name="name"></td>
+			<td align="right">ClubName : </td>
+			<td><input type="text" name="name"></td>
 		</tr>
 	</table>
 	<br>
-	<td><input class="btn btn-primary"type="submit" name="submit" value="Add"></td>
+	<td><input type="submit" name="submit" value="Add"></td>
 	<br><br>
 	</form>
 	<form action="/clubs">
-    <input class="btn" type="submit" value="กลับ">
+    <input type="submit" value="Back">
 	</form>
 
-@endsection
+</body>
+</html>

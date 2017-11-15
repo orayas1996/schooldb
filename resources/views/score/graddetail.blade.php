@@ -1,6 +1,4 @@
-@extends('layouts.app')
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html>
 <head>
 <title>Grade detail</title>
@@ -8,14 +6,6 @@
 <body>
 <h1><center>ผลการเรียน</center></h1>
 <center>
-=======
-@section('content')
-
-
-<center><div class="page-header ">
-<h2>ผลการเรียน</h2>
-</div>
->>>>>>> 975728f7b3ed3ebedd5527ec957dee8456b20d64
 <table>
   <tr>
     <td width="30" height="42" align="center" valign="middle">ชื่อ:</td>
@@ -23,13 +13,17 @@
   </tr>
 </table>
 <br>
-  <table class="table table-striped" border=2>
+  <table border=1>
+  <tr>
+	<th align="center" colspan="2" bgcolor="lightgray">คะแนนความประพฤติ</th>
+	<td align="center">{{$student->behave_score}}</td>
+  </tr>
   <tr>
     <td align="center" valign="middle" rowspan="7" width="200">มัธยมศึกษาปีที่ 1</td>
-	<th align="center" valign="middle" width="150" bgcolor="lightgray"><center>รายวิชา
-	</center></th>
-	<th align="center" valign="middle" bgcolor="lightgray"><center>ผลการเรียน
-    </center></th>	
+	<th align="center" valign="middle" width="150" bgcolor="lightgray">รายวิชา
+	</th>
+	<th align="center" valign="middle" bgcolor="lightgray">ผลการเรียน
+    </th>	
   </tr>
   <tr>
   <td><center>ภาษาไทย</center></td>
@@ -57,10 +51,10 @@
 </tr>
   <tr>
     <td align="center" valign="middle" rowspan="7" width="200">มัธยมศึกษาปีที่ 2</td>
-	<th align="center" valign="middle" width="150" bgcolor="lightgray"><center>รายวิชา
-	</center></th>
-	<th align="center" valign="middle" bgcolor="lightgray"><center>ผลการเรียน
-    </center></th>	
+	<th align="center" valign="middle" width="150" bgcolor="lightgray">รายวิชา
+	</th>
+	<th align="center" valign="middle" bgcolor="lightgray">ผลการเรียน
+    </th>	
   </tr>
   <tr>
   <td><center>ภาษาไทย</center></td>
@@ -88,10 +82,10 @@
 </tr>
   <tr>
     <td align="center" valign="middle" rowspan="7" width="200">มัธยมศึกษาปีที่ 3</td>
-	<th align="center" valign="middle" width="150" bgcolor="lightgray"><center>รายวิชา
-	</center></th>
-	<th align="center" valign="middle" bgcolor="lightgray"><center>ผลการเรียน
-    </center></th>	
+	<th align="center" valign="middle" width="150" bgcolor="lightgray">รายวิชา
+	</th>
+	<th align="center" valign="middle" bgcolor="lightgray">ผลการเรียน
+    </th>	
   </tr>
   <tr>
   <td><center>ภาษาไทย</center></td>
@@ -123,8 +117,10 @@
 <br>
 <center>
 <form action="/score">
-    <input class="btn" type="submit" value="กลับ">
+    <input type="submit" value="Back">
 	</form>
 </center>
 
-@endsection
+<body>
+</body>
+</html>

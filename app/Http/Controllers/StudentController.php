@@ -11,20 +11,18 @@
 	{
 		public function insertpage()
 		{
-			return view('students.insertForm',[
-			'title'=>'Studentinsert']);
+			return view('students.insertForm');
 		}
 		
 		public function editpage($id)
 		{
 			$student = Students::findOrFail($id);
-			return view('students.editForm',['title'=>'Studentedit'])->with('student',$student)->with('id',$id);
+			return view('students.editForm')->with('student',$student)->with('id',$id);
 		}
 		
 		public function searchstudent()
 		{
-			return view('students.searchstudent',[
-			'title'=> 'Student']);
+			return view('students.searchstudent');
 		}
 		
 		public function searchscore(Request $request)
@@ -37,13 +35,13 @@
 		public function scoredetail($id)
 		{
 			$student = Students::findOrFail($id);
-			return view('score.graddetail',['title'=>'gradedetail'])->with('student', $student);
+			return view('score.graddetail')->with('student', $student);
 		}
 		
 		public function index()
 		{
 		    $students = Students::all();
-			return view('students.indexForm',['title'=>'Studentindex'], [
+			return view('students.indexForm', [
 			'students' => $students
 			]);
 		}
@@ -51,19 +49,19 @@
 		public function indexgrade($grade)
 		{
 			$students = Students::all()->where('grade',$grade);
-			return view('students.indexForm', ['students' => $students],['title'=>'Studentgrade']);
+			return view('students.indexForm', ['students' => $students]);
 		}
 		
 		public function indexgraderoom($grade, $room)
 		{
 			$students = Students::all()->where('grade',$grade)->where('room',$room);
-			return view('students.indexForm', ['students' => $students],['title'=>'Studentroom']);
+			return view('students.indexForm', ['students' => $students]);
 		}
 		
 		public function detail($id)
 		{
 			$student = Students::findOrFail($id);
-			return view('students.studentdetail',['title'=>'Studentdetail'])->with('student',$student);
+			return view('students.studentdetail')->with('student',$student);
 		}
 		
 		public function save(Request $request)
