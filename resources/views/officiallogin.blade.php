@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Officials Login</title>
-</head>
-<body>
 
-	<center>
-		<h1>OFFICIALS LOGIN</h1>
-	<br>
+@extends('layouts.app')
+<!DOCTYPE html>
+@section('content')
+
+
+<center><div class="page-header ">
+<h2>เข้าสู่ระบบ</h2>
+</div>
+  <center>
 	<form action='/official/login' method="post">
 	<table>
 	<tr>
@@ -20,9 +20,11 @@
 	</tr>
 	</table>
 	<br>
-	<input type="submit" name="login" value="Login">
+	<input class="btn btn-danger"type="submit" name="login" value="เข้าสู่ระบบ">
 	</form>
 	<br>
-	<form action="/home"><input type="submit" value="Back"></form>
-</body>
-</html>
+	<form  action="/home"><input class="btn" type="submit" value="กลับ"></form>
+	</center>
+</center>	
+
+@endsection

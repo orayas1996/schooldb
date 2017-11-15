@@ -1,12 +1,15 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Official Index</title>
-</head>
-<body>
+@section('content')
+
+<div class="page-header ">
+  <h2>ข้อมูลอาจารย์ทั้งหมด</h2>
+</div>
+  <br>
+  <br>
+  
 <center>
-	<h1>All Officials</h1>
-	<table border=2><tr bgcolor"#FF0000";>
+	<table class = "table table-striped" border=2><tr bgcolor"#FF0000";>
 		<th width="150"><center>ssn</center></th>
 		<th width="200"><center>name</center></th>
 		<th width="100"><center>teacherroom</center></th>
@@ -27,9 +30,12 @@
 		@endforeach
 	</table><br>
 	</table><br>
-	<form action="/officials/insertpage"><input type="submit" value="Add Official"></form>
-	<br>
-	</form><form action="/home"><input type="submit" value="Back"></form>
+	<div><form action="/officials/insertpage"><input class ="btn btn-primary " type="submit" value="เพิ่มข้อมูลอาจารย์"></form>
+	<br></div>
+	
+	<div></form><form action="/home"><input class="btn " type="submit" value="กลับ"></form></div>
 
-</body>
-</html>
+
+
+
+@endsection
