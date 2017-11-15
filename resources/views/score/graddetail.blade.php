@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>grade detail</title>
+<title>Grade detail</title>
 </head>
 <body>
 <h1><center>ผลการเรียน</center></h1>

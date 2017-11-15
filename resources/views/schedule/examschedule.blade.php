@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>student detail</title>
+<title>EXAM detail</title>
 </head>
 <body>
 <h1><center>ตารางสอบ</center></h1>
 <center>
+
+<table>
   <tr>
-    <td width="126" height="42" align="center" valign="middle">ชั้นมัธยมศึกษาปีที่:</td>
-    <td width="300">&nbsp;{{$class->name}}</td>
+    <td width="150" height="42" align="center" valign="middle">ชั้นมัธยมศึกษาปีที่ :</td>
+    <td width="25">{{$grade}}</td>
   </tr>
-  <tr>
-    <td width="126" height="42" align="center" valign="middle">ห้อง:</td>
-    <td width="300">&nbsp;{{$room->name}}</td>
-  </tr>
+</table>
 
 <table border=1>
   <tr>
-    <th height="40" align="center" colspan="1" rowspan="1" valign="middle">รายวิชา</th>
-	<th height="40" align="center" colspan="1" rowspan="1" valign="middle">วัน/เดือน/ปี</th>
-	<th height="40" align="center" colspan="1" rowspan="1" valign="middle">เวลา</th>
-	<th height="40" align="center" colspan="1" rowspan="1" valign="middle">ห้อง</th>
-	<th height="40" align="center" colspan="1" rowspan="1" valign="middle">อาจารย์คุมการสอบ</th>
+    <th height="40" width="200" align="center" valign="middle">รายวิชา</th>
+	<th height="40" width="200" align="center" valign="middle">วัน/เวลา</th>
+@foreach ($subjects as $subject)
 <tr>
-	<td>ภาษาไทย</td>
-	<td>01/12/17</td>
-	<td>12.00-15.00</td>
-	<td>room502</td>
-	<td>teacher A</td>
+	<td align="center" valign="middle"><center>{{$subject->name}}<center></td>
+	<td align="center" valign="middle"><center>{{$subject->time}}<center></td>
 </tr>
-<tr>
-	<td>ภาษาอังกฤษ</td>
-	<td>03/12/17</td>
-	<td>08.00-11.00</td>
-	<td>room604</td>
-  <td>teacher B</td>
-</tr>
+@endforeach
 </table>
 </center>
 
 <br>
 <center>
-<form action="/students/searchstudent">
+<form action="/searchexam">
     <input type="submit" value="Back">
 	</form>
 </center>

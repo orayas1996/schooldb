@@ -84,7 +84,7 @@ $router->get('/student/{id}/editpage','StudentController@editpage');
 $router->post('/student/{id}/editsave','StudentController@editsave');
 //DETAIL SCORE
 $router->post('/students/searchingscore','StudentController@searchscore');
-$router->get('student/{id}/score', 'StudentController@scoredetail');
+$router->get('/student/{id}/score', 'StudentController@scoredetail');
 //OFFICIALS
 $router->get('/officials/index', 'OfficialController@index');
 $router->get('/officials/insertpage','OfficialController@insertpage');
@@ -95,8 +95,6 @@ $router->get('/official/{ssn}/delete','OfficialController@delete');
 $router->get('/official/{ssn}/editpage','OfficialController@editpage');
 $router->post('/official/{ssn}/editsave','OfficialController@editsave');
 $router->get('/official/{id}/detail','OfficialController@detail');
-//SCHEDULE
-$router->get('/schedule/{grade}/{room}', 'TableController@table');
 //CLUBS
 $router->get('/clubs', 'ClubController@allclubs');
 $router->get('/clubs/insertpage','ClubController@insertpage');
@@ -116,6 +114,11 @@ $router->get('/subject/{id}/detail', 'SubjectController@detail');
 $router->get('/subject/{id}/editpage', 'SubjectController@editpage');
 $router->post('/subject/{id}/editsave', 'SubjectController@editsave');
 $router->get('/subject/{id}/delete','SubjectController@delete');
+//SCHEDULE
+$router->get('/schedule/{grade}/{room}', 'TableController@table');
+//EXAM
+$router->get('/searchexam', 'PageController@searchexam');
+$router->get('/searchexam/{grade}', 'TableController@examdetail');
 
 $router->get('/', 'IndexController@index');
 

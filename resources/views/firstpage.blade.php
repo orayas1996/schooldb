@@ -37,6 +37,10 @@
     <td height="50" align="center" bgcolor="#FF9966"><a href="/clubs">ชมรม</a></td>
     <td align="left" valign="middle">&nbsp;รายชื่อชมรมทั้งหมดภายในโรงเรียน</td>
   </tr>
+  <tr>
+    <td height="50" align="center" bgcolor="#FF9966"><a href="/searchexam">เวลาสอบ</a></td>
+    <td align="left" valign="middle">&nbsp;รายละเอียดเวลาสอบของนักเรียนแต่ละชั้นปี</td>
+  </tr>
 </table>
 </body>
 </html>

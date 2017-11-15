@@ -35,5 +35,9 @@
 			return view('subjects.search');
 		}
 		
+		public function searchexam()
+		{
+			return view('schedule.searchexam');
+		}
 		
 	}

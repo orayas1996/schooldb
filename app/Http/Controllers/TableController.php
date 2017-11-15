@@ -5,6 +5,7 @@
 	use Illuminate\Http\Request;
 	use Illuminate\Support\Facades\DB;
 	use App\Education;
+	use App\Subjects;
 	
 	class TableController extends Controller
 	{
@@ -27,6 +28,12 @@
 										'fri' => $fri,
 										'grade' => $grade,
 										'room' => $room]);
+		}
+		
+		public function examdetail($grade)
+		{
+			$subjects = Subjects::all()->where('grade',$grade)->sortBy('id');
+			return view('schedule.examschedule')->with('subjects',$subjects)->with('grade',$grade);
 		}
 		
 	}
