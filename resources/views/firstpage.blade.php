@@ -3,6 +3,7 @@
 @section('content')
 <div>
 
+
 <p class="navbar-text navbar-right"><a href="/officials/login" class="navbar-link">Log in</a></p>
 
 
@@ -76,7 +77,7 @@
 </div>
 
 
-
 </div>
+
 
 @endsection
