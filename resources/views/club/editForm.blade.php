@@ -1,11 +1,15 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Edit Form</title>
-</head>
-<body>
+@section('content')
+
+
+<div class="page-header ">
+<h2>แก้ไขชมรม</h2>
+</div>
+  <br>
+  <br>
 <center>
-<h1>Editing Club</h1>
+
 
 	<form action='/club/<?php echo $id; ?>/editsave' method="post">
 	<table>
@@ -14,17 +18,15 @@
 			<td><input type="text" name="id"></td>
 		</tr>-->
 		<tr>
-			<td>Name : </td>
-			<td><input type="text" name="name" value="<?php echo $club->name; ?>"></td>
+			<td>Name : &nbsp;</td>
+			<td><input type="text" name="name"></td>
 		</tr>
 	</table>
 	<br>
-	<td><input type="submit" name="submit" value="Edit"></td>
+	<td><input class="btn btn-info" type="submit" name="submit" value="แก้ไขเสร็จสิ้น"></td>
 	</form>
 	<br>
 	<form action="/clubs">
-    <input type="submit" value="Back">
+    <input class="btn" type="submit" value="กลับ">
 	</form>
-
-</body>
-</html>
+@endsection

@@ -14,6 +14,8 @@
 			return view('schedule.schedule');
 		}
 		
+	
+		
 		public function table($grade, $room)
 		{
 			$mon = Education::all()->where('grade',$grade)->where('room',$room)->where('day',1)->sortBy('period');
@@ -27,13 +29,13 @@
 										'thu' => $thu,
 										'fri' => $fri,
 										'grade' => $grade,
-										'room' => $room]);
+										'room' => $room],['title'=>'scheduletable']);
 		}
 		
 		public function examdetail($grade)
 		{
 			$subjects = Subjects::all()->where('grade',$grade)->sortBy('id');
-			return view('schedule.examschedule')->with('subjects',$subjects)->with('grade',$grade);
+			return view('schedule.examschedule',['title' =>'examdetail'])->with('subjects',$subjects)->with('grade',$grade);
 		}
 		
 	}

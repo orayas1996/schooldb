@@ -11,31 +11,33 @@
 	{
 		public function insertpage()
 		{
-			return view('students.insertForm');
+			return view('students.insertForm',[
+			'title'=>'Studentinsert']);
 		}
 		
 		public function editpage($id)
 		{
 			$student = Students::findOrFail($id);
-			return view('students.editForm')->with('student',$student)->with('id',$id);
+			return view('students.editForm',['title'=>'Studentedit'])->with('student',$student)->with('id',$id);
 		}
 		
 		public function searchstudent()
 		{
-			return view('students.searchstudent');
+			return view('students.searchstudent',[
+			'title'=> 'Student']);
 		}
 		
 		public function searchscore(Request $request)
 		{
 			$id = $request->input('id');
 			$student = Students::findOrFail($id);
-			return view('score.graddetail')->with('student',$student);
+			return view('score.graddetail',['title'=>'gradedetail'])->with('student',$student);
 		}
 		
 		public function scoredetail($id)
 		{
 			$student = Students::findOrFail($id);
-			return view('score.graddetail')->with('student', $student);
+			return view('score.graddetail',['title'=>'scoredetail'])->with('student', $student);
 		}
 		
 		public function index()
@@ -43,25 +45,25 @@
 		    $students = Students::all();
 			return view('students.indexForm', [
 			'students' => $students
-			]);
+			],['title'=>'Studentindex']);
 		}
 		
 		public function indexgrade($grade)
 		{
 			$students = Students::all()->where('grade',$grade);
-			return view('students.indexForm', ['students' => $students]);
+			return view('students.indexForm', ['students' => $students],['title'=>'Studentgrade']);
 		}
 		
 		public function indexgraderoom($grade, $room)
 		{
 			$students = Students::all()->where('grade',$grade)->where('room',$room);
-			return view('students.indexForm', ['students' => $students]);
+			return view('students.indexForm', ['students' => $students],['title'=>'Studentroom']);
 		}
 		
 		public function detail($id)
 		{
 			$student = Students::findOrFail($id);
-			return view('students.studentdetail')->with('student',$student);
+			return view('students.studentdetail',['title'=>'Studentdetail'])->with('student',$student);
 		}
 		
 		public function save(Request $request)

@@ -12,32 +12,38 @@
 	{
 		public function homepage()
 		{
-			return view('firstpage');
+			return view('firstpage',[
+			'title'=> 'School']);
 		}	
 		
 		public function searchscore()
 		{
-			return view('score.searchscore');
+			return view('score.searchscore',[
+			'title'=>'Score']);
 		}
 		
 		public function searchtable()
 		{
-			return view('schedule.searchtable');
+			return view('schedule.searchtable',[
+			'title'=>'Table']);
 		}
 		
 		public function loginpage()
 		{
-			return view('officiallogin');
+			return view('officiallogin',['title'=>'loginpage']);
 		}
 		
 		public function searchsubject()
 		{
-			return view('subjects.search');
+			return view('subjects.search',[
+			'title'=> 'subject']);
 		}
 		
 		public function searchexam()
 		{
-			return view('schedule.searchexam');
+			return view('schedule.searchexam',[
+			'title'=> 'exam']);
 		}
+		
 		
 	}

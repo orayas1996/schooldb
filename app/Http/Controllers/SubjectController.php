@@ -15,44 +15,45 @@
 		    $subjects = Subjects::all();
 			return view('subjects.indexForm', [
 			'subjects' => $subjects
-			]);
+			],['title'=>'subjectindex']);
 		}
 		
 		public function search()
 		{
-			return view('subjects.search');
+			return view('subjects.search',[
+			'title'=> 'subject']);
 		}
 		
 		public function insertpage()
 		{
-			return view('subjects.insertForm');
+			return view('subjects.insertForm',['title'=> 'subjectinsert']);
 		}
 		
 		public function editpage($id)
 		{
 			$subject = Subject::findOrFail($id);
-			return view('subjects.editForm')->with('subject',$subject)->with('id',$id);
+			return view('subjects.editForm',['title'=>'subjectedit'])->with('subject',$subject)->with('id',$id);
 		}
 		
 		
 		public function searchbygrade($grade)
 		{
 			$subjects = Subjects::all()->where('grade',$grade);
-			return view('subjects.indexForm')->with('subjects',$subjects);
+			return view('subjects.indexForm',['title'=>'subjectgrade'])->with('subjects',$subjects);
 		}
 		
 		
 		public function indexgrade($grade)
 		{
 			$subjects = Subjects::all()->where('grade',$grade);
-			return view('subjects.indexForm', ['subjects' => $subjects]);
+			return view('subjects.indexForm', ['subjects' => $subjects],['title'=>'indexgrade']);
 		}
 		
 		
 		public function detail($id)
 		{
 			$subject = Subject::findOrFail($id);
-			return view('subjects.detail')->with('subject',$subject)->with('id',$id);
+			return view('subjects.detail',['title'=>'subjectdetail'])->with('subject',$subject)->with('id',$id);
 		}
 		
 		public function save(Request $request)

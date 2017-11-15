@@ -1,15 +1,18 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-<title>Exam search</title>
+@section('content')
 
-</head>
-<body>
 
-<center>
-	<table>
+<div class="page-header ">
+  <h2>ค้นหาตารางสอบ</h2>
+</div>
+  <br>
+  <br>
+
+
+	<table class="table table-striped">
 	<tr>
-		<td><center><h1>ตารางสอบ</h1></center></td>
+		<td><center><h3>ตารางสอบ</h3></center></td>
 	</tr>
 	<tr>
 		<td><a href="/searchexam/1"><center>มัธยมศึกษาปีที่1</center></a></td>
@@ -23,9 +26,9 @@
 	</table>
 
 	<br>
-	
-	<form action="/home"><input type="submit" value="Back"></form>	
-</form>
+	<center>
+	<form action="/home"><input class="btn" type="submit" value="กลับ"></form>	
+	</center>
 
-</body>
-</html>
+
+@endsection

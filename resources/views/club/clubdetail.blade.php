@@ -1,31 +1,34 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-<title>Club detail</title>
-</head>
-<body>
-<h1><center>กิจกรรมนอกเวลาเรียน</center></h1>
+@section('content')
+
+
 <center>
-	<tr>
+<div class="page-header ">
+  <h2>กิจกรรมนอกเวลาเรียน</h2>
+</div>
+
+
+    <tr>
 		<td width="126" height="42" align="center" valign="middle">ชมรม:</td>
-		<td width="300">&nbsp;{{$club->name}}</td>
+		<td width="300">{{$club->name}}</td>
 	</tr>
-<table>
-    <th height="40" align="center" valign="middle">อาจารย์ที่ปรึกษา</th>
+<center><table >
+    <th  height="40" align="center" valign="middle"><center>อาจารย์ที่ปรึกษา</center></th>
 	@foreach ($teachers as $teacher)
 	<tr>
 		<td>{{$teacher->name}}</td>
 	</tr>
 	@endforeach
 
-</table>
+</table></center>
 <br>
-<table border=1>
+<table  border=2 class="table table-striped">
 	<tr>
-		<th height="30" width="80" align="center" valign="middle" bgcolor="lightgray">ลำดับที่</th>
-		<th width="200" align="center" valign="middle" bgcolor="lightgray">นักเรียน</th>
-		<th width="50" align="center" valign="middle" bgcolor="lightgray">ชั้น</th>
-		<th width="50" align="center" valign="middle" bgcolor="lightgray">ห้อง</th>
+		<th height="30" width="80" align="center" valign="middle" ><center>ลำดับที่</center></th>
+		<th width="200" align="center" valign="middle"><center>นักเรียน</center></th>
+		<th width="50" align="center" valign="middle" ><center>ชั้น</center></th>
+		<th width="50" align="center" valign="middle" ><center>ห้อง</center></th>
 	</tr>
 	<p hidden><?php echo $var=0; ?></p>
 	@foreach ($students as $student)
@@ -43,10 +46,8 @@
 <br>
 <center>
 <form action="/clubs">
-    <input type="submit" value="Back">
+    <input class="btn" type="submit" value="กลับ">
 	</form>
 </center>
 
-<body>
-</body>
-</html>
+@endsection

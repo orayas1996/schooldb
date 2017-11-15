@@ -1,12 +1,15 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-<title>student detail</title>
-</head>
-<body>
-<h1><center>ข้อมูลนักเรียน</center></h1>
+@section('content')
+
+
 <center>
-<table width="500" height="544" border=1>
+<div class="page-header ">
+<h2>ข้อมูลนักเรียน</h2>
+</div>
+
+
+<table class="table table-striped" width="500" height="544" border=2>
   <tr align="right" valign="middle">
     <td height="150" colspan="2">&nbsp;</td>
   </tr>
@@ -48,10 +51,10 @@
 <br>
 <center>
 <form action="/students/searchstudent">
-    <input type="submit" value="Back">
+    <input class="btn" type="submit" value="กลับ">
 	</form>
 </center>
 
-<body>
-</body>
-</html>
+
+
+@endsection

@@ -1,55 +1,60 @@
+@extends('layouts.app')
 <!DOCTYPE html>
-<html>
-<head>
-<title>grade index</title>
+@section('content')
+<div>
 
-</head>
-<body>
-<h1><center>Student search</center></h1>
+<div class="page-header ">
+  <h2>ค้นหาข้อมูลนักเรียน</h2>
+</div>
+  <br>
+  <br>
 
-<center>
-	<table>
-	<tr>
-		<td>มัธยมศึกษาปีที่1 :</td>
-		<td><a href="/studentin/1/1">ห้อง1</a></td>
-		<td><a href="/studentin/1/2">ห้อง2</a></td>
-		<td><a href="/studentin/1/3">ห้อง3</a></td>
-		<td><a href="/studentin/1/4">ห้อง4</a></td>
-		<td><a href="/studentin/1/5">ห้อง5</a></td>
-	</tr>
-	</table>
-
-<br>
-
-	<table>
-	<tr>
-		<td>มัธยมศึกษาปีที่2 :</td>
-		<td><a href="/studentin/2/1">ห้อง1</a></td>
-		<td><a href="/studentin/2/2">ห้อง2</a></td>
-		<td><a href="/studentin/2/3">ห้อง3</a></td>
-		<td><a href="/studentin/2/4">ห้อง4</a></td>
-		<td><a href="/studentin/2/5">ห้อง5</a></td>
-	</tr>
-	</table>
+<div align='center'>
+<h3>มัธยมศึกษาปีที่1</h3>
+<ol class="breadcrumb">
+  <li><a href="/studentin/1/1">ห้อง1</a></li>
+  <li><a href="/studentin/1/2">ห้อง2</a></li>
+  <li><a href="/studentin/1/3">ห้อง3</a></li>
+  <li><a href="/studentin/1/4">ห้อง4</a></li>
+  <li><a href="/studentin/1/5">ห้อง5</a></li>
+</ol>
+</div>
 
 <br>
 
-	<table>
-	<tr>
-		<td>มัธยมศึกษาปีที่3 :</td>
-		<td><a href="/studentin/3/1">ห้อง1</a></td>
-		<td><a href="/studentin/3/2">ห้อง2</a></td>
-		<td><a href="/studentin/3/3">ห้อง3</a></td>
-		<td><a href="/studentin/3/4">ห้อง4</a></td>
-		<td><a href="/studentin/3/5">ห้อง5</a></td>
-	</tr>
-	</table>
+<div align='center'>
+<h3>มัธยมศึกษาปีที่2</h3>
+<ol class="breadcrumb">
+  <li><a href="/studentin/2/1">ห้อง1</a></li>
+  <li><a href="/studentin/2/2">ห้อง2</a></li>
+  <li><a href="/studentin/2/3">ห้อง3</a></li>
+  <li><a href="/studentin/2/4">ห้อง4</a></li>
+  <li><a href="/studentin/2/5">ห้อง5</a></li>
+</ol>
+</div>
 	
-	<br>
-	<form action="/students/index"><input type="submit" value="All Student"></form>
-	<br>
-	<form action="/home"><input type="submit" value="Back"></form>	
-</form>
+<br>
 
-</body>
-</html>
+<div align='center'>
+<h3>มัธยมศึกษาปีที่3</h3>
+<ol class="breadcrumb">
+  <li><a href="/studentin/3/1">ห้อง1</a></li>
+  <li><a href="/studentin/3/2">ห้อง2</a></li>
+  <li><a href="/studentin/3/3">ห้อง3</a></li>
+  <li><a href="/studentin/3/4">ห้อง4</a></li>
+  <li><a href="/studentin/3/5">ห้อง5</a></li>
+</ol>
+</div>
+
+<br>
+<center>
+<form action="/students/index"><input class="btn btn-primary" type="submit" value="นักเรียนทั้งหมด">
+</form>
+<br>
+<form action="/home"><input class="btn" type="submit" value="กลับ">
+</form>
+</center>
+
+<div>
+
+@endsection
