@@ -9,7 +9,7 @@
   <br>
   <br>
 
-<form action="/students/searchingscore" method="post">
+<form action="/students/searchingscore" method="get">
 <center>
 <table>
 <tr>

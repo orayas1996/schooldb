@@ -83,8 +83,7 @@ $router->get('/student/{id}/delete','StudentController@delete');
 $router->get('/student/{id}/editpage','StudentController@editpage');
 $router->post('/student/{id}/editsave','StudentController@editsave');
 //DETAIL SCORE
-$router->post('/students/searchingscore','StudentController@searchscore');
-$router->get('/student/{id}/score', 'StudentController@scoredetail');
+$router->get('/students/searchingscore','StudentController@searchscore');
 //OFFICIALS
 $router->get('/officials/index', 'OfficialController@index');
 $router->get('/officials/insertpage','OfficialController@insertpage');
@@ -119,6 +118,7 @@ $router->get('/schedule/{grade}/{room}', 'TableController@table');
 //EXAM
 $router->get('/searchexam', 'PageController@searchexam');
 $router->get('/searchexam/{grade}', 'TableController@examdetail');
+//SCORE
 
 $router->get('/', 'IndexController@index');
 

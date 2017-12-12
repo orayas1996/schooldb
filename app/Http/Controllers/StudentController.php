@@ -5,6 +5,8 @@
 	use Illuminate\Http\Request;
 	use App\Models\Student;
 	use App\Students;
+	use App\Subjects;
+	use App\Scores;
 	use Illuminate\Support\Facades\DB;
 	
 	class StudentController extends Controller
@@ -31,13 +33,17 @@
 		{
 			$id = $request->input('id');
 			$student = Students::findOrFail($id);
-			return view('score.graddetail',['title'=>'gradedetail'])->with('student',$student);
-		}
-		
-		public function scoredetail($id)
-		{
-			$student = Students::findOrFail($id);
-			return view('score.graddetail',['title'=>'scoredetail'])->with('student', $student);
+			
+			$scores1 = DB::table('score')->where('student_id',$id)->where('year','1')->get();
+			$scores2 = DB::table('score')->where('student_id',$id)->where('year','2')->get();
+			$scores3 = DB::table('score')->where('student_id',$id)->where('year','3')->get();
+			
+			
+			return view('score.graddetail',['title'=>'gradedetail', 
+											'student'=>$student, 
+											'scores1'=>$scores1, 
+											'scores2'=>$scores2,
+											'scores3'=>$scores3]);
 		}
 		
 		public function index()
