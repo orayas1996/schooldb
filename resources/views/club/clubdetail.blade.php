@@ -25,10 +25,10 @@
 <br>
 <table  border=2 class="table table-striped">
 	<tr>
-		<th height="30" width="80" align="center" valign="middle" ><center>ลำดับที่</center></th>
-		<th width="200" align="center" valign="middle"><center>นักเรียน</center></th>
-		<th width="50" align="center" valign="middle" ><center>ชั้น</center></th>
-		<th width="50" align="center" valign="middle" ><center>ห้อง</center></th>
+		<th height="30" width="80" align="center" valign="middle" bgcolor="lightgray"><center>ลำดับที่</center></th>
+		<th width="200" align="center" valign="middle" bgcolor="lightgray"><center>รายชื่อนักเรียนในชมรม</center></th>
+		<th width="50" align="center" valign="middle" bgcolor="lightgray"><center>ชั้น</center></th>
+		<th width="50" align="center" valign="middle" bgcolor="lightgray"><center>ห้อง</center></th>
 	</tr>
 	<p hidden><?php echo $var=0; ?></p>
 	@foreach ($students as $student)

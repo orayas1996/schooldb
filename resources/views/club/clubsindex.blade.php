@@ -9,11 +9,11 @@
   <br>
   <center>
 	<table class="table table-striped" border=2 bgcolor"#FF0000"><tr bgcolor"#FF0000">
-		<th width="100"><center>Club_ID</center></th>
-		<th width="150"><center>Club_name</center></th>
-		<th width="50"><center>Edit</center></th>
-		<th width="50"><center>Delete</center></th>
-		<th width="50"><center>Details</center></th>
+		<th width="100" bgcolor="lightgray"><center>รหัสชมรม</center></th>
+		<th width="150" bgcolor="lightgray"><center>ชื่อชมรม</center></th>
+		<th width="50" bgcolor="lightgray"><center>Edit</center></th>
+		<th width="50" bgcolor="lightgray"><center>Delete</center></th>
+		<th width="50" bgcolor="lightgray"><center>Details</center></th>
 	</tr>
     
         @foreach ($clubs as $club)

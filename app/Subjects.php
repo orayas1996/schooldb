@@ -20,8 +20,4 @@ class Subjects extends Model
     {
         return $this->belongsTO('App\Officials');
     }
-	public function hasscore()
-	{
-		return $this->belongsTOMany('App\Scores');
-	}
 }

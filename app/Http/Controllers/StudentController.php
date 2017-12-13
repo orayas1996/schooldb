@@ -8,6 +8,7 @@
 	use App\Subjects;
 	use App\Scores;
 	use Illuminate\Support\Facades\DB;
+	use Illuminate\Database\Eloquent\ModelNotFoundException;
 	
 	class StudentController extends Controller
 	{
@@ -32,18 +33,41 @@
 		public function searchscore(Request $request)
 		{
 			$id = $request->input('id');
-			$student = Students::findOrFail($id);
 			
-			$scores1 = DB::table('score')->where('student_id',$id)->where('year','1')->get();
-			$scores2 = DB::table('score')->where('student_id',$id)->where('year','2')->get();
-			$scores3 = DB::table('score')->where('student_id',$id)->where('year','3')->get();
+			if(empty($id)) {
+				echo "<br><br><center><h3>Student ID Cannot be empty!</h3><br>
+				Searching Fail!<br><br>" ;
+				echo"<form action=\"/score\">
+				<input type=\"submit\" value=\"Back\">
+				</form>";
+			}
 			
+			else{
+				
+				try{
+					$student = Students::findOrFail($id);
+					
+					$scores1 = DB::table('score')->where('student_id',$id)->where('year','1')->get();
+					$scores2 = DB::table('score')->where('student_id',$id)->where('year','2')->get();
+					$scores3 = DB::table('score')->where('student_id',$id)->where('year','3')->get();
 			
-			return view('score.graddetail',['title'=>'gradedetail', 
-											'student'=>$student, 
-											'scores1'=>$scores1, 
-											'scores2'=>$scores2,
-											'scores3'=>$scores3]);
+					return view('score.graddetail',['title'=>'gradedetail', 
+													'student'=>$student, 
+													'scores1'=>$scores1, 
+													'scores2'=>$scores2,
+													'scores3'=>$scores3]);
+					
+				}
+				catch(ModelNotFoundException $er){
+					echo "<center><br><br><h3>Student Not Founded!</h3><br>
+					Student ID must have 5-digits eg.00001 <br><br>
+					<form action=\"/score\">
+					<input type=\"submit\" value=\"Back\">
+					</form>";
+				}
+			
+				
+			}
 		}
 		
 		public function index()

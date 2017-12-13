@@ -15,23 +15,23 @@
 		</tr>-->
 		<tr>
 			<td>Name : </td>
-			<td><input class="form-control" type="text" name="name"></td>
+			<td><input class="form-control" type="text" name="name" value="{{$subject->name}}"></td>
 		</tr>
 		<tr>
 			<td>Exam_Date : </td>
-			<td><input class="form-control" type="text" name="time"></td>
+			<td><input class="form-control" type="text" name="time" value="{{$subject->time}}"></td>
 		</tr>
 		<tr>
 			<td>Year : </td>
-			<td><input class="form-control" type="number" name="year"></td>
+			<td><input class="form-control" type="number" name="year" value="{{$subject->grade}}"></td>
 		</tr>
 		<tr>
 			<td>Teacher : </td>
-			<td><input class="form-control" type="text" name="sj_teacher"></td>
+			<td><input class="form-control" type="text" name="sj_teacher" value="{{$subject->sj_teacher}}"></td>
 		</tr>
 		<tr>
 			<td>Details : </td>
-			<td><input class="form-control" type="text" name="detail"></td>
+			<td><input class="form-control" type="text" name="detail" value="{{$subject->detail}}"></td>
 		</tr>
 		
 	</table>

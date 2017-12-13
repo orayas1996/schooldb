@@ -25,8 +25,4 @@ class Students extends Model
     {
         return $this->belongsTO('App\Classrooms');
     }
-	public function hasscore()
-	{
-		return $this->belongsTOMany('App\Scores');
-	}
 }

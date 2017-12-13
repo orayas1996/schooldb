@@ -17,10 +17,10 @@
   </tr>
 </table>
 
-<table border=1>
+<table class="table table-striped" border=1>
   <tr>
-    <th height="40" width="200" align="center" valign="middle"><center>รายวิชา</center></th>
-	<th height="40" width="200" align="center" valign="middle"><center>วัน/เวลา</center></th>
+    <th height="40" width="200" align="center" valign="middle" border=2 bgcolor="lightgray"><center>รายวิชา</center></th>
+	<th height="40" width="200" align="center" valign="middle" border=2 bgcolor="lightgray"><center>วัน/เวลา</center></th>
 @foreach ($subjects as $subject)
 <tr>
 	<td align="center" valign="middle"><center>{{$subject->name}}<center></td>

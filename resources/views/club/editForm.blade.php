@@ -19,7 +19,7 @@
 		</tr>-->
 		<tr>
 			<td>Name : &nbsp;</td>
-			<td><input type="text" name="name"></td>
+			<td><input type="text" name="name" value="{{$club->name}}"></td>
 		</tr>
 	</table>
 	<br>
