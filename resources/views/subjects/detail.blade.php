@@ -24,7 +24,7 @@
   </tr>
   <tr>
     <td height="40" align="center" valign="middle">ปีการศึกษา:</td>
-    <td>&nbsp;{{$subject->year}}</td>
+    <td>&nbsp;{{$subject->grade}}</td>
   </tr>
   <tr>
     <td height="37" align="center" valign="middle">ข้อมูลรายวิชา:</td>

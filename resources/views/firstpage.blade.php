@@ -2,11 +2,9 @@
 <!DOCTYPE html>
 @section('content')
 <div>
-
-
-<p class="navbar-text navbar-right"><a href="/officials/login" class="navbar-link">Log in</a></p>
-
-
+@if(1===1)
+	<p class="navbar-text navbar-right"><a href="/officials/login" class="navbar-link">Log in</a></p>
+@endif
 <!------------------------------------------------------------->
  <div class="glyphicon glyphicon-heart page-header ">
   <h1>Bare Bears School   <small>welcome to our site</small></h1>

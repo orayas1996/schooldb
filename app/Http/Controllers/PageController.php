@@ -33,6 +33,11 @@
 			return view('officiallogin',['title'=>'loginpage']);
 		}
 		
+        public function checkloginpage()
+		{
+			return view('login.checklogin',['title'=>'checkloginpage']);
+		}
+		
 		public function searchsubject()
 		{
 			return view('subjects.search',[

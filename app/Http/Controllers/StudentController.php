@@ -65,17 +65,13 @@
 					<input type=\"submit\" value=\"Back\">
 					</form>";
 				}
-			
-				
 			}
 		}
 		
 		public function index()
 		{
 		    $students = Students::all();
-			return view('students.indexForm', [
-			'students' => $students
-			],['title'=>'Studentindex']);
+			return view('students.indexForm', ['students' => $students],['title'=>'Studentindex']);
 		}
 		
 		public function indexgrade($grade)

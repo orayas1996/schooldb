@@ -7,18 +7,18 @@
 <h2>เข้าสู่ระบบ</h2>
 </div>
   <center>
-	<form action='/official/login' method="post">
+	<form action='/officials/checklogin' method="post">
 	<table>
 	<tr>
 		<td width="25%" align="right">Username:</td>
-		<td><input type="text" name="username"></td>
+		<td><input type="text" name="textUsername" id="textUsername"></td>
 	<tr>
 	</table>
 	<br>
 	<table>
 	<tr>
 		<td width="25%" align="right">&nbsp;Password:</td>
-		<td><input type="password" name="password"></td>
+		<td><input type="password" name="textPassword" id="textPassword"></td>
 	</tr>
 	</table>
 	<br>

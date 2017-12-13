@@ -65,6 +65,7 @@ $router->get('/student/{id}', function($id){
 //HOMEPAGE
 $router->get('/home', 'PageController@homepage');
 $router->get('/officials/login', 'PageController@loginpage');
+$router->post('/officials/checklogin', 'PageController@checkloginpage');
 $router->get('/score', 'PageController@searchscore');
 $router->get('/table', 'PageController@searchtable');
 $router->get('/subjects', 'PageController@searchsubject');

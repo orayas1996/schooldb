@@ -13,27 +13,27 @@
 	<table class="table table-striped">
 		<tr>
 			<td>Official_ssn : </td>
-			<td><input class="form-control" type="text" name="ssn"></td>
+			<td><input class="form-control" type="text" name="ssn" placeholder="13-digits eg.0123456789101" required></td>
 		</tr>
 		<tr>
 			<td>Name : </td>
-			<td><input class="form-control" type="text" name="name"></td>
+			<td><input class="form-control" type="text" name="name" placeholder="Thai-lang eg.สวัสดี มีดี"></td>
 		</tr>
 		<tr>
 			<td>Sex : </td>
-			<td><input class="form-control" type="text" name="sex"></td>
+			<td><input class="form-control" type="text" name="sex" placeholder="digit(s) eg.ช"></td>
 		</tr>
 		<tr>
 			<td>Address : </td>
-			<td><input class="form-control" type="text" name="address"></td>
+			<td><input class="form-control" type="text" name="address" placeholder="eg.888 hollywood"></td>
 		</tr>
 		<tr>
 			<td>TeacherRoom : </td>
-			<td><input class="form-control" type="text" name="teacherroom"></td>
+			<td><input class="form-control" type="text" name="teacherroom" placeholder="Room eg.312"></td>
 		</tr>
 		<tr>
 			<td>Club : </td>
-			<td><input class="form-control" type="text" name="club"></td>
+			<td><input class="form-control" type="text" name="club" placeholder="5-digits eg.11111"></td>
 		</tr>
 		</table>
 		

@@ -14,7 +14,7 @@
 <table>
 <tr>
 	<td width="25%" align="right"><label for="id">รหัสนักเรียน:</label></td>
-	<td><input type="text" name="id" value=""></td>
+	<td><input type="text" name="id" value="" placeholder="5-digits eg.00001"></td>
 	<td width="25%"><input class="btn btn-primary btn-sm" type="submit" name="search" value="ค้นหา"></td>
 </tr>
 </table>  
