@@ -5,7 +5,7 @@
   use App\Models\Official;
   use App\Officials;
   use Illuminate\Support\Facades\DB;
-
+  use Illuminate\Database\Eloquent;
   class OfficialController extends Controller
 	{
 		public function index()
@@ -21,13 +21,14 @@
 			$username = $request->input('username');
 			$password = $request->input('password');
 			
-			$check = DB::table('officials',['title'=>'login'])->where(['username'=>$username,'password'=>$password])->get();
-			if(count($check) >0)
-			{
-				echo "Login Success!";
-			}else{
-				echo "Login Fail!";
-			}
+			$check = officials::all()->where('user',$username)->where('password',$password)->firstOrFail();
+			echo $check;
+			#if(count($check) >0)
+			#{
+			#	echo "Login Success!";
+			#}else{
+			#	echo "Login Fail!";
+			#}
 		}
 		
 		public function detail($ssn)

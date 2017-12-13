@@ -45,6 +45,9 @@
   </tr>
 </table>
 
+	@foreach ($subjects as $subject)
+		<?php echo($subject);?>
+	@endforeach
 
 
 </body>
