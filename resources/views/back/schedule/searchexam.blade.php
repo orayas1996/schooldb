@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 @section('content')
 
-
+<p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <div class="page-header ">
   <h2>ค้นหาตารางสอบ</h2>
 </div>
@@ -27,7 +27,7 @@
 
 	<br>
 	<center>
-	<form action="/bk/home"><input class="btn" type="submit" value="กลับ"></form>	
+	<form action="/bk/home"><input class="btn" type="submit" value="กลับ"></form>
 	</center>
 
 

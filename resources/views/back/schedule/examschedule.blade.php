@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 @section('content')
 
-
+<p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <div class="page-header ">
   <h2>ตารางสอบ</h2>
 </div>

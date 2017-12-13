@@ -7,7 +7,7 @@
 </div>
   <br>
   <br>
- <center> 
+ <center>
 
 	<form action='/officials/save' method="post">
 	<table class="table table-striped">
@@ -36,9 +36,9 @@
 			<td><input class="form-control" type="text" name="club" placeholder="5-digits eg.11111"></td>
 		</tr>
 		</table>
-		
+
 			<td><input class="btn btn-success" type="submit" name="submit" value="เพิ่ม"></td>
-		
+
 	</form>
 	<br>
 	<form action="/bk/officials/index">

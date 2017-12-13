@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 @section('content')
 
-
+<p class="navbar-text navbar-right"><a href="/officials/login" class="navbar-link">Log in</a></p>
 <center><div class="page-header ">
 <h2>เข้าสู่ระบบ</h2>
 </div>
@@ -27,6 +27,6 @@
 	<br>
 	<form  action="/home"><input class="btn" type="submit" value="กลับ"></form>
 	</center>
-</center>	
+</center>
 
 @endsection

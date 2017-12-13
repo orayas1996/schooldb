@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 @section('content')
 
+<p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <div class="page-header ">
   <h2>ข้อมูลชมรมทั้งหมด</h2>
 </div>
@@ -15,7 +16,7 @@
 		<th width="50" bgcolor="lightgray"><center>Delete</center></th>
 		<th width="50" bgcolor="lightgray"><center>Details</center></th>
 	</tr>
-    
+
         @foreach ($clubs as $club)
 			<tr>
 				<td><center>{{$club->id}}</center></td>

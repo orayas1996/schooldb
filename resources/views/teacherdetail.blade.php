@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<p class="navbar-text navbar-right"><a href="/officials/login" class="navbar-link">Log in</a></p>
 <html>
 <head>
 <title>teacher detail</title>

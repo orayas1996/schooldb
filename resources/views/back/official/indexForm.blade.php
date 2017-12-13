@@ -2,15 +2,14 @@
 <!DOCTYPE html>
 @section('content')
 
-
-
+<p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <div class="page-header">
 <h2>ข้อมูลอาจารย์ทั้งหมด</h2>
 </div>
   <br>
   <br>
 <center>
-	
+
 	<table class="table table-striped" border=2><tr bgcolor"#FF0000";>
 		<th width="150" bgcolor="lightgray"><center>รหัสประจำตัวประชาชน</center></th>
 		<th width="200" bgcolor="lightgray"><center>ชื่อ - สกุล</center></th>

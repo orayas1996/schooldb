@@ -3,7 +3,7 @@
 @section('content')
 
   <?php $var = 1; ?>
-
+<p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <center>
 <br>
 <br>

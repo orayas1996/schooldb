@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 @section('content')
 
-
+<p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <center><div class="page-header ">
 <h2>ผลการเรียน</h2>
 </div>
@@ -19,7 +19,7 @@
 	<th align="center" valign="middle" width="150" bgcolor="lightgray"><center>รายวิชา
 	</center></th>
 	<th align="center" valign="middle" bgcolor="lightgray"><center>ผลการเรียน
-    </center></th>	
+    </center></th>
   </tr>
 	@foreach ($scores1 as $scr)
 	<tr>
@@ -32,7 +32,7 @@
 	<th align="center" valign="middle" width="150" bgcolor="lightgray"><center>รายวิชา
 	</center></th>
 	<th align="center" valign="middle" bgcolor="lightgray"><center>ผลการเรียน
-    </center></th>	
+    </center></th>
   </tr>
   @foreach ($scores2 as $scr)
 	<tr>
@@ -45,7 +45,7 @@
 	<th align="center" valign="middle" width="150" bgcolor="lightgray"><center>รายวิชา
 	</center></th>
 	<th align="center" valign="middle" bgcolor="lightgray"><center>ผลการเรียน
-    </center></th>	
+    </center></th>
   </tr>
   @foreach ($scores3 as $scr)
 	<tr>

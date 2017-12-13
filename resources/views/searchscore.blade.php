@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<p class="navbar-text navbar-right"><a href="/officials/login" class="navbar-link">Log in</a></p>
 <html>
 <head>
 <title>Search score</title>
@@ -15,14 +16,14 @@
 	<td><input type="text" name="id" value=""></td>
 	<td width="25%"><input type="submit" name="search" value="ค้นหา"></td>
 </tr>
-</table>  
+</table>
 </center>
 </form>
 <br>
 <center>
 	<form action="/home"><input type="submit" value="Back"></form>
 </center>
-  
+
 
 </body>
 </html>

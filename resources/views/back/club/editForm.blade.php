@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 @section('content')
 
-
 <div class="page-header ">
 <h2>แก้ไขชมรม</h2>
 </div>

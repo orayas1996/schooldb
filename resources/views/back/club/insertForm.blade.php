@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 @section('content')
 
-
-	
 <div class="page-header ">
 <h2>เพิ่มวิชา</h2>
 </div>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 @section('content')
 <div>
-
+<p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <div class="page-header ">
   <h2>ค้นหาตารางเรียน</h2>
 </div>
@@ -32,7 +32,7 @@
   <li><a href="/bk/schedule/2/5">ห้อง5</a></li>
 </ol>
 </div>
-	
+
 <br>
 
 <div align='center'>

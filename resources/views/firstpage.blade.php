@@ -11,7 +11,7 @@
   <br>
 
 <div class="row"><div class="col-sm-1 col-md-3"><div class="thumbnail">
-      <img src="http://www.mx7.com/i/2a3/AUD737.jpg" alt="">
+      <img src="https://www.picz.in.th/images/2017/12/14/Untitled-10448a9dd29d2aad8.jpg" alt="Untitled-10448a9dd29d2aad8.jpg" border="0" />
       <div class="caption">
         <h3>ข้อมูลนักเรียน</h3>
         <p>รายละเอียดข้อมูกนักเรียนทั้งหมดในโรงเรียน</p>
@@ -19,7 +19,7 @@
          <li role="presentation" class="disabled"><a href="/students/searchstudent">ค้นหาข้อมูลนักเรียน</a></li>
       </div></div></div>
 <div class="col-sm-1 col-md-3"><div class="thumbnail">
-      <img src="http://www.mx7.com/i/140/rXc4Zf.jpg" alt="">
+      <img src="https://www.picz.in.th/images/2017/12/14/Untitled-3.jpg" alt="Untitled-3.jpg" border="0" />
       <div class="caption">
         <h3>ข้อมูลบุคลากร</h3>
         <p>รายละเอียดข้อมูลอาจารย์ทั้งหมดในโรงเรียน</p>
@@ -27,7 +27,7 @@
          <li role="presentation" class="disabled"><a href="/officials/index">ค้นหาข้อมูลอาจารย์</a></li>
       </div></div></div>
 <div class="col-sm-1 col-md-3"><div class="thumbnail">
-      <img src="http://www.mx7.com/i/1d2/1S6EmH.jpg" alt="">
+      <img src="https://www.picz.in.th/images/2017/12/14/41825a62fe3c7319b.jpg" alt="41825a62fe3c7319b.jpg" border="0" />
       <div class="caption">
         <h3>วิชาเรียน</h3>
         <p>รายละเอียดวิชาที่เปิดสอนทั้งหมด</p>
@@ -35,7 +35,7 @@
          <li role="presentation" class="disabled"><a href="/subjects">ค้นหาข้อมูลวิชาที่เปิดสอน</a></li>
       </div></div></div>
 <div class="col-sm-1 col-md-3"><div class="thumbnail">
-      <img src="http://www.mx7.com/i/2a3/AUD737.jpg" alt="">
+      <a href="https://www.picz.in.th/image/dXdjRD"><img src="https://www.picz.in.th/images/2017/12/14/1402e2bbb4f67a05c.jpg" alt="1402e2bbb4f67a05c.jpg" border="0" /></a>
       <div class="caption">
         <h3>ชมรม</h3>
         <p>รายละเอียดกิจกรรมนอกเวลาเรียนของนักเรียน</p>
@@ -43,7 +43,7 @@
          <li role="presentation" class="disabled"><a href="/clubs">ค้นหาข้อมูลชมรม</a></li>
       </div></div></div>
 <div class="col-sm-1 col-md-3"><div class="thumbnail">
-      <img src="http://www.mx7.com/i/250/xnxdER.jpg" alt="">
+      <img src="https://www.picz.in.th/images/2017/12/14/Untitled-4.jpg" alt="Untitled-4.jpg" border="0" />
       <div class="caption">
         <h3>ตารางเรียน</h3>
         <p>รายละเอียดข้อมูลตารางเรียนของนักเรียน</p>
@@ -51,7 +51,7 @@
         <li role="presentation" class="disabled"><a href="/table">ค้นหาตารางเรียน</a></li>
       </div></div></div>
 <div class="col-sm-1 col-md-3"><div class="thumbnail">
-      <img src="http://www.mx7.com/i/250/xnxdER.jpg" alt="">
+      <img src="https://www.picz.in.th/images/2017/12/14/Untitled-5.jpg" alt="Untitled-5.jpg" border="0" />
       <div class="caption">
         <h3>ตารางสอบ</h3>
         <p>รายละเอียดข้อมูลตารางสอบของนักเรียน</p>
@@ -59,17 +59,17 @@
         <li role="presentation" class="disabled"><a href="/searchexam">ค้นหาตารางสอบ</a></li>
       </div></div></div>
 <div class="col-sm-1 col-md-3"><div class="thumbnail">
-      <img src="http://www.mx7.com/i/250/xnxdER.jpg" alt="">
+      <img src="https://www.picz.in.th/images/2017/12/14/Untitled-2ac329687027a1108.jpg" alt="Untitled-2ac329687027a1108.jpg" border="0" />
       <div class="caption">
         <h3>ผลการเรียน</h3>
         <p>ผลการเรียนทุกภาคการศึกษาของนักเรียน</p>
 		<br>
         <li role="presentation" class="disabled"><a href="/score">ค้นหาผลการเรียน</a></li>
       </div></div></div>
-	  
-	  
-	  
-	  
+
+
+
+
 </div>
 
 

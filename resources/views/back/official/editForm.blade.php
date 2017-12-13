@@ -32,7 +32,7 @@
 			<td>Club: </td>
 			<td><input class="form-control" type="text" name="club" value="{{$official->club}}"></td>
 		</tr>
-		
+
 	</table>
 	<tr>
 		<td><input class="btn btn-info" type="submit" name="submit" value="แก้ไขเสร็จสิ้น"></td>

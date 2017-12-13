@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 @section('content')
 
-
+<p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <div class="page-header ">
 <p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <h2>ข้อมูลนักเรียนทั้งหมด</h2>
 </div>
   <br>
   <br>
-<center>  
+<center>
 	<table class="table table-striped" border=2><tr bgcolor="lightgray">
 		<th width="100" bgcolor="lightgray"><center>รหัสนักเรียน</center></th>
 		<th width="150" bgcolor="lightgray"><center>รหัสประจำตัวประชาชน</center></th>
@@ -20,7 +20,7 @@
 		<th width="50" bgcolor="lightgray"><center>Delete</center></th>
 		<th width="50" bgcolor="lightgray"><center>Details</center></th>
 	</tr>
-    
+
         @foreach ($students as $student)
 			<tr>
 				<td><center>{{$student->id}}</center></td>
@@ -40,4 +40,4 @@
 	</form><form action="/bk/students/searchstudent"><input class="btn" type="submit" value="กลับ"></form>
 
 
-@endsection	
+@endsection
