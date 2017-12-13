@@ -15,7 +15,7 @@ class Students extends Model
     }
     public function parent()
     {
-        return $this->hasMany('App\Parents','ownparent');
+        return $this->belongsTO('App\Parents','ownparent');
     }
     public function clubs()
     {
@@ -25,8 +25,4 @@ class Students extends Model
     {
         return $this->belongsTO('App\Classrooms');
     }
-	public function hasscore()
-	{
-		return $this->belongsTOMany('App\Scores');
-	}
 }

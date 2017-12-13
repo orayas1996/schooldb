@@ -11,6 +11,6 @@ class Parents extends Model
     public function ownparent()
     {
 
-        return $this->belongsTO('App\Students','ownparent');
+        return $this->hasMany('App\Students','ownparent');
     }
 }

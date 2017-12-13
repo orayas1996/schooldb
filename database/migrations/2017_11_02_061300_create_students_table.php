@@ -17,7 +17,7 @@ class CreateStudentsTable extends Migration
             $table->string('id',5);
 			      $table->string('ssn')->uniqe();
       			$table->string('name');
-      			$table->string('sex');
+      			$table->string('sex',1);
       			$table->integer('age');
       			$table->string('address');
             $table->integer('behave_score'); //มีทำไม??

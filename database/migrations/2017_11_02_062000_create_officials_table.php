@@ -16,7 +16,7 @@ class CreateOfficialsTable extends Migration
         Schema::create('officials', function (Blueprint $table) {
             $table->string('ssn',13);
             $table->string('name');
-			      $table->string('sex');
+			      $table->string('sex',1);
 			      $table->string('address');
 			      $table->string('teacherroom');
             $table->string('club',5);
