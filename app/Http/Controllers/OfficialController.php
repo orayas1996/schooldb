@@ -11,6 +11,14 @@
 		public function index()
 		{
 		    $officials = Officials::all();
+			return view('back.official.indexForm', [
+			'officials' => $officials
+			],['title'=> 'official']);
+  		}
+		
+		public function gindex()
+		{
+		    $officials = Officials::all();
 			return view('official.indexForm', [
 			'officials' => $officials
 			],['title'=> 'official']);
@@ -34,18 +42,24 @@
 		public function detail($ssn)
 		{
 			$teacher = Officials::findOrFail($ssn);
+			return view('back.official.teacherdetail',['title'=>'officialdetail'])->with('official',$teacher);
+		}
+		
+		public function gdetail($ssn)
+		{
+			$teacher = Officials::findOrFail($ssn);
 			return view('official.teacherdetail',['title'=>'officialdetail'])->with('official',$teacher);
 		}
 
   		public function insertpage()
   		{
-  			return view('official.insertForm',['title'=>'officialinsret']);
+  			return view('back.official.insertForm',['title'=>'officialinsret']);
   		}
 
   		public function editpage($ssn)
   		{
 			$teacher = Officials::findOrFail($ssn);
-  			return view('official.editForm',['title'=>'officialedit'])->with('official',$teacher)->with('ssn',$ssn);
+  			return view('back.official.editForm',['title'=>'officialedit'])->with('official',$teacher)->with('ssn',$ssn);
   		}
 
       public function save(Request $request)
@@ -65,7 +79,7 @@
 				$official->save(); 
 				echo "<center>Adding Success!";
 			}
-  			echo"<form action=\"/officials/index\">
+  			echo"<form action=\"/bk/officials/index\">
   			<input type=\"submit\" value=\"Go To Officials\">
   			</form>";
   		}
@@ -74,8 +88,8 @@
   		{
   			$official = Official::findOrFail($ssn);
   			$official->delete();
-  			echo "Delete Success!!";
-  			echo"<form action=\"/officials/index\">
+  			echo "<center>Delete Success!!";
+  			echo "<form action=\"/bk/officials/index\">
   			<input type=\"submit\" value=\"Go To official\">
   			</form>";
   		}
@@ -91,8 +105,8 @@
   			$official->teacherroom=$request->input('teacherroom');
 			$official->club=$request->input('club');
   			$official->save();
-  			echo "Edit Success!!";
-  			echo"<form action=\"/officials/index\">
+  			echo "<center>Edit Success!!";
+  			echo "<form action=\"/bk/officials/index\">
   			<input type=\"submit\" value=\"Go To Official\">
   			</form>";
   		}

@@ -15,11 +15,11 @@ $query = mysqli_query($conn,$sql);
 $resultArray = array();
 	if($result = mysqli_fetch_array($query,MYSQLI_ASSOC)){
 		array_push($resultArray,$result);
-		echo "<meta http-equiv='refresh' content='1;URL=/home'>";
+		echo "<meta http-equiv='refresh' content='1;URL=/bk/home'>";
 	}
 	else{
 		echo"<script language=\"JavaScript\">";
-		echo"alert('Username and Password Incorrect!')";
+		echo"alert('Username or Password Incorrect!')";
 		echo"</script>";
 		echo "<meta http-equiv='refresh' content='1;URL=/officials/login'>";
 	}

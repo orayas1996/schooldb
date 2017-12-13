@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subjects extends Model
 {
+	protected $primaryKey = 'id';
+	
     public $incrementing = false;
 
     public function score()
@@ -20,5 +22,4 @@ class Subjects extends Model
     {
         return $this->belongsTO('App\Officials');
     }
-
 }

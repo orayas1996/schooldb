@@ -8,9 +8,11 @@ class Parents extends Model
 {
     public $incrementing = false;
 
+	protected $primaryKey = 'ssn';
+	
     public function ownparent()
     {
 
-        return $this->hasMany('App\Students','ownparent');
+        return $this->belongsTO('App\Students','ownparent');
     }
 }

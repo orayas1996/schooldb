@@ -2,8 +2,9 @@
 <!DOCTYPE html>
 @section('content')
 
-	
+
 <div class="page-header ">
+<p class="navbar-text navbar-right"><a href="/home" class="navbar-link">Log Out</a></p>
 <h2>ข้อมูลนักเรียนทั้งหมด</h2>
 </div>
   <br>
@@ -15,8 +16,8 @@
 		<th width="200" bgcolor="lightgray"><center>ชื่อ - สกุล</center></th>
 		<th width="30" bgcolor="lightgray"><center>ชั้น</center></th>
 		<th width="30" bgcolor="lightgray"><center>ห้อง</center></th>
-		<!--<th width="50" bgcolor="lightgray"><center>Edit</center></th>
-		<th width="50" bgcolor="lightgray"><center>Delete</center></th>-->
+		<th width="50" bgcolor="lightgray"><center>Edit</center></th>
+		<th width="50" bgcolor="lightgray"><center>Delete</center></th>
 		<th width="50" bgcolor="lightgray"><center>Details</center></th>
 	</tr>
     
@@ -27,16 +28,16 @@
 				<td>{{$student->name}}</td>
 				<td><center>{{$student->grade}}</center></td>
 				<td><center>{{$student->room}}</center></td>
-				<!--<td><center><a href="/student/{{$student->id}}/editpage">Click</a></center></td>
-				<td><center><a href="/student/{{$student->id}}/delete">Click</a></center></td>-->
-				<td><center><a href="/student/{{$student->id}}/detail">Click</a></center></td>
+				<td><center><a href="/bk/student/{{$student->id}}/editpage">Click</a></center></td>
+				<td><center><a href="/bk/student/{{$student->id}}/delete">Click</a></center></td>
+				<td><center><a href="/bk/student/{{$student->id}}/detail">Click</a></center></td>
 			</tr>
 		@endforeach
 	</table><br>
 	</table><br>
-	<!--<form action="/students/insertpage"><input class="btn btn-primary" type="submit" value="เพิ่มนักเรียน"></form>
-	<br>-->
-	</form><form action="/students/searchstudent"><input class="btn" type="submit" value="กลับ"></form>
+	<form action="/bk/students/insertpage"><input class="btn btn-primary" type="submit" value="เพิ่มนักเรียน"></form>
+	<br>
+	</form><form action="/bk/students/searchstudent"><input class="btn" type="submit" value="กลับ"></form>
 
 
 @endsection	

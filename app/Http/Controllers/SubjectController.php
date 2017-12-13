@@ -13,6 +13,14 @@
 		public function index()
 		{
 		    $subjects = Subjects::all();
+			return view('back.subjects.indexForm', [
+			'subjects' => $subjects
+			],['title'=>'subjectindex']);
+		}
+		
+		public function gindex()
+		{
+		    $subjects = Subjects::all();
 			return view('subjects.indexForm', [
 			'subjects' => $subjects
 			],['title'=>'subjectindex']);
@@ -20,28 +28,39 @@
 		
 		public function search()
 		{
+			return view('back.subjects.search',[
+			'title'=> 'subject']);
+		}
+		
+		public function gsearch()
+		{
 			return view('subjects.search',[
 			'title'=> 'subject']);
 		}
 		
 		public function insertpage()
 		{
-			return view('subjects.insertForm',['title'=> 'subjectinsert']);
+			return view('back.subjects.insertForm',['title'=> 'subjectinsert']);
 		}
 		
 		public function editpage($id)
 		{
 			$subject = Subject::findOrFail($id);
-			return view('subjects.editForm',['title'=>'subjectedit'])->with('subject',$subject)->with('id',$id);
+			return view('back.subjects.editForm',['title'=>'subjectedit'])->with('subject',$subject)->with('id',$id);
 		}
 		
 		
 		public function searchbygrade($grade)
 		{
 			$subjects = Subjects::all()->where('grade',$grade);
-			return view('subjects.indexForm',['title'=>'subjectgrade'])->with('subjects',$subjects);
+			return view('back.subjects.indexForm',['title'=>'subjectgrade'])->with('subjects',$subjects);
 		}
 		
+		public function gsearchbygrade($grade)
+		{
+			$subjects = Subjects::all()->where('grade',$grade);
+			return view('subjects.indexForm',['title'=>'subjectgrade'])->with('subjects',$subjects);
+		}
 		
 		public function indexgrade($grade)
 		{
@@ -51,6 +70,12 @@
 		
 		
 		public function detail($id)
+		{
+			$subject = Subject::findOrFail($id);
+			return view('back.subjects.detail',['title'=>'subjectdetail'])->with('subject',$subject)->with('id',$id);
+		}
+		
+		public function gdetail($id)
 		{
 			$subject = Subject::findOrFail($id);
 			return view('subjects.detail',['title'=>'subjectdetail'])->with('subject',$subject)->with('id',$id);
@@ -63,19 +88,14 @@
 			$subject->name=$request->input('name');
 			$subject->grade=$request->input('grade');
 			$subject->time=$request->input('time');
-			$subject->year=$request->input('year');
 			$subject->sj_teacher=$request->input('sj_teacher');
 			$subject->detail=$request->input('detail');
-			if(empty($subject->id)) {
-				echo "<br><br><center><h3>ID Cannot be empty!</h3><br>
-				Adding Fail!<br>" ;	
-			}
-			else{
-				$subject->save(); 
-				echo "<center>Adding Success!";
-			}
 			
-			echo"<form action=\"/subjects/index\">
+			
+			$subject->save(); 
+			echo "<center>Adding Success!";
+			
+			echo"<form action=\"/bk/subjects/index\">
 			<input type=\"submit\" value=\"Go To Subjects\">
 			</form>";
 		}
@@ -87,12 +107,11 @@
 			$subject->name=$request->input('name');
 			$subject->grade=$request->input('grade');
 			$subject->time=$request->input('time');
-			$subject->year=$request->input('year');
 			$subject->sj_teacher=$request->input('sj_teacher');
 			$subject->detail=$request->input('detail');
 			$subject->save();
 			echo "<br><br><center>Edit Success!!<br>";
-			echo"<form action=\"/subjects/index\">
+			echo"<form action=\"/bk/subjects/index\">
 			<input type=\"submit\" value=\"Go To Subjects\">
 			</form>";
 		}
@@ -102,7 +121,7 @@
 			$subject = Subject::findOrFail($id);
 			$subject->delete();
 			echo "<br><br><center>Delete Success!!<br>";
-			echo"<form action=\"/subjects/index\">
+			echo"<form action=\"/bk/subjects/index\">
 			<input type=\"submit\" value=\"Go To Subjects\">
 			</form>";
 		}

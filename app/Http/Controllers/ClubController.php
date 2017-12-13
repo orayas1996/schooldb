@@ -15,22 +15,39 @@
 	{
 		public function insertpage()
 		{
-			return view('club.insertForm',['title'=>'insertclub']);
+			return view('back.club.insertForm',['title'=>'insertclub']);
 		}
 
 		public function editpage($id)
 		{
 			$club = Clubs::findOrFail($id);
-			return view('club.editForm',['title'=>'editclub'])->with('club',$club)->with('id',$id);
+			return view('back.club.editForm',['title'=>'editclub'])->with('club',$club)->with('id',$id);
 		}
 
 		public function allclubs()
+		{
+			$clubs = Clubs::all();
+			return view('back.club.clubsindex',['clubs' => $clubs],['title'=>'Club']);
+		}
+		
+		public function gallclubs()
 		{
 			$clubs = Clubs::all();
 			return view('club.clubsindex',['clubs' => $clubs],['title'=>'Club']);
 		}
 
 		public function detail($id)
+		{
+			$club = Clubs::findOrFail($id);
+			$teachers = Officials::all()->where('club',$id);
+			$students = Students::all()->where('club',$id);
+			return view('back.club.clubdetail',['teachers' => $teachers,
+										'students' => $students],[
+										'title'=>'clubdetail'])
+										->with('club',$club);
+		}
+		
+		public function gdetail($id)
 		{
 			$club = Clubs::findOrFail($id);
 			$teachers = Officials::all()->where('club',$id);
@@ -54,7 +71,7 @@
 				$club->save(); 
 				echo "<center>Adding Success!";
 			}
-			echo"<form action=\"/clubs\">
+			echo"<form action=\"/bk/clubs\">
 			<input type=\"submit\" value=\"Go To Clubs\">
 			</form>";
 		}
@@ -64,7 +81,7 @@
 			$club = Club::findOrFail($id);
 			$club->delete();
 			echo "<br><br><center>Delete Success!!<br>";
-			echo"<form action=\"/clubs\">
+			echo"<form action=\"/bk/clubs\">
 			<input type=\"submit\" value=\"Go To Clubs\">
 			</form>";
 		}
@@ -76,7 +93,7 @@
 			$club->name=$request->input('name');
 			$club->save();
 			echo "<br><br><center>Edit Success!!<br>";
-			echo"<form action=\"/clubs\">
+			echo"<form action=\"/bk/clubs\">
 			<input type=\"submit\" value=\"Go To Clubs\">
 			</form>";
 		}

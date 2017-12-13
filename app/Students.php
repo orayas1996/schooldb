@@ -15,7 +15,7 @@ class Students extends Model
     }
     public function parent()
     {
-        return $this->belongsTO('App\Parents','ownparent');
+        return $this->hasMany('App\Parents','ownparent');
     }
     public function clubs()
     {

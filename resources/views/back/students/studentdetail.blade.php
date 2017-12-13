@@ -54,7 +54,7 @@
 
 <br>
 <center>
-<form action="/students/searchstudent">
+<form action="/bk/students/searchstudent">
     <input class="btn" type="submit" value="กลับ">
 	</form>
 </center>
