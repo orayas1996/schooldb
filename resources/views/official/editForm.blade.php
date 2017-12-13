@@ -14,23 +14,23 @@
 		</tr>-->
 		<tr>
 			<td>Name : </td>
-			<td><input class="form-control" type="text" name="name"></td>
+			<td><input class="form-control" type="text" name="name" value="{{$official->name}}"></td>
 		</tr>
 		<tr>
 			<td>Sex : </td>
-			<td><input class="form-control" type="text" name="sex"></td>
+			<td><input class="form-control" type="text" name="sex" value="{{$official->sex}}"></td>
 		</tr>
 		<tr>
 			<td>Address : </td>
-			<td><input class="form-control" type="text" name="address"></td>
+			<td><input class="form-control" type="text" name="address" value="{{$official->address}}"></td>
 		</tr>
 		<tr>
 			<td>Teacherroom : </td>
-			<td><input class="form-control" type="text" name="teacherroom"></td>
+			<td><input class="form-control" type="text" name="teacherroom" value="{{$official->teacherroom}}"></td>
 		</tr>
 		<tr>
 			<td>Club: </td>
-			<td><input class="form-control" type="text" name="club"></td>
+			<td><input class="form-control" type="text" name="club" value="{{$official->club}}"></td>
 		</tr>
 		
 	</table>

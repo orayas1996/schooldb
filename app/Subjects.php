@@ -20,5 +20,5 @@ class Subjects extends Model
     {
         return $this->belongsTO('App\Officials');
     }
-	
+
 }

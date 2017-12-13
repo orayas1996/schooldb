@@ -9,15 +9,15 @@
   <br>
   <br>
 <center>  
-	<table class="table table-striped" border=2><tr bgcolor"#FF0000">
-		<th width="100"><center>student_id</center></th>
-		<th width="150"><center>student_ssn</center></th>
-		<th width="200"><center>student_name</center></th>
-		<th width="30"><center>grade</center></th>
-		<th width="30"><center>room</center></th>
-		<th width="50"><center>Edit</center></th>
-		<th width="50"><center>Delete</center></th>
-		<th width="50"><center>Details</center></th>
+	<table class="table table-striped" border=2><tr bgcolor="lightgray">
+		<th width="100" bgcolor="lightgray"><center>รหัสนักเรียน</center></th>
+		<th width="150" bgcolor="lightgray"><center>รหัสประจำตัวประชาชน</center></th>
+		<th width="200" bgcolor="lightgray"><center>ชื่อ - สกุล</center></th>
+		<th width="30" bgcolor="lightgray"><center>ชั้น</center></th>
+		<th width="30" bgcolor="lightgray"><center>ห้อง</center></th>
+		<th width="50" bgcolor="lightgray"><center>Edit</center></th>
+		<th width="50" bgcolor="lightgray"><center>Delete</center></th>
+		<th width="50" bgcolor="lightgray"><center>Details</center></th>
 	</tr>
     
         @foreach ($students as $student)

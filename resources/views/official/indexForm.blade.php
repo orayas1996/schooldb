@@ -12,12 +12,12 @@
 <center>
 	
 	<table class="table table-striped" border=2><tr bgcolor"#FF0000";>
-		<th width="150"><center>ssn</center></th>
-		<th width="200"><center>name</center></th>
-		<th width="100"><center>teacherroom</center></th>
-		<th width="50"><center>Edit</center></th>
-		<th width="50"><center>Delete</center></th>
-		<th width="50"><center>Details</center></th>
+		<th width="150" bgcolor="lightgray"><center>รหัสประจำตัวประชาชน</center></th>
+		<th width="200" bgcolor="lightgray"><center>ชื่อ - สกุล</center></th>
+		<th width="100" bgcolor="lightgray"><center>ห้องพักครู</center></th>
+		<th width="50" bgcolor="lightgray"><center>Edit</center></th>
+		<th width="50" bgcolor="lightgray"><center>Delete</center></th>
+		<th width="50" bgcolor="lightgray"><center>Details</center></th>
 	</tr>
 
         @foreach ($officials as $official)
