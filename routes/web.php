@@ -19,6 +19,11 @@ use App\Models\Student;
 |
 */
 
+
+
+
+
+
 $router->get('/version', function () use ($router) {
     return $router->app->version();
 });
@@ -125,4 +130,7 @@ $router->get('/', 'IndexController@index');
 $router->get('/posts', 'PostController@index');
 
 $router->get('/posts/{id}', 'PostController@view');
+
+
+
 
